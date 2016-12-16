@@ -196,7 +196,7 @@ body.wp {
     font-size: $button-wp-small-font-size;
   }
 
-  .button-small[icon-only] ion-icon {
+  .button-small.icon-only ion-icon {
     font-size: $button-wp-small-icon-font-size;
   }
 
@@ -310,7 +310,7 @@ body.wp {
     border-radius: $button-wp-round-border-radius;
   }
 
-  .button [icon-only] {
+  .button .icon-only {
     padding: 0;
   }
 

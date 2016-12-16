@@ -3,7 +3,7 @@
 // Label
 // --------------------------------------------------
 
-ion-label {
+.ion-label {
   display: block;
   overflow: hidden;
 
@@ -16,7 +16,7 @@ ion-label {
   white-space: nowrap;
 }
 
-.item-input ion-label {
+.item-input .ion-label {
   flex: initial;
 
   max-width: 200px;
@@ -24,7 +24,7 @@ ion-label {
   pointer-events: none;
 }
 
-[text-wrap] ion-label {
+.text-wrap .ion-label {
   white-space: normal;
 }
 
@@ -32,7 +32,7 @@ ion-label {
 // Stacked & Floating Inputs
 // --------------------------------------------------
 
-ion-label[fixed] {
+.ion-label.fixed {
   flex: 0 0 100px;
 
   width: 100px;
@@ -40,16 +40,16 @@ ion-label[fixed] {
   max-width: 200px;
 }
 
-.item-label-stacked ion-label,
-.item-label-floating ion-label {
+.item-label-stacked .ion-label,
+.item-label-floating .ion-label {
   align-self: stretch;
 
   width: auto;
   max-width: 100%;
 }
 
-ion-label[stacked],
-ion-label[floating] {
+.ion-label.stacked,
+.ion-label.floating {
   margin-bottom: 0;
 }
 
@@ -59,13 +59,13 @@ ion-label[floating] {
   flex-direction: column;
 }
 
-.item-label-stacked ion-select,
-.item-label-floating ion-select {
+.item-label-stacked .ion-select,
+.item-label-floating .ion-select {
   align-self: stretch;
 
   max-width: 100%;
 }
 
-.item-select ion-label[floating] {
+.item-select .ion-label.floating {
   transform: translate3d(0, 0, 0) scale(.8);
 }

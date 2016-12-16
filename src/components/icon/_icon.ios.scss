@@ -6,10 +6,14 @@
 // Generate iOS Icon Colors
 // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+body.ios {
 
-  .icon-ios-#{$color-name} {
-    color: $color-base;
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+
+    .ion-icon.#{$color-name} {
+      color: $color-base;
+    }
+
   }
-
+  
 }

@@ -289,13 +289,13 @@ body.ios {
     pointer-events: none;
   }
 
-  .bar-button[icon-only] {
+  .bar-button.icon-only {
     padding: 0;
 
     min-width: .9em;
   }
 
-  .bar-button[icon-only] ion-icon {
+  .bar-button.icon-only ion-icon {
     padding: 0 .1em;
 
     font-size: 1.8em;

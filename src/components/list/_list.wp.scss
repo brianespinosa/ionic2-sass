@@ -99,8 +99,8 @@ $list-wp-header-color:           $list-wp-text-color !default;
 // If the item has the no-lines attribute remove the bottom border from:
 // the item itself (for last-child items)
 // the item-inner class (if it is not last)
-.list-wp .item[no-lines],
-.list-wp .item[no-lines] .item-inner {
+.list-wp .item.no-lines,
+.list-wp .item.no-lines .item-inner {
   border-width: 0;
 }
 
@@ -148,8 +148,8 @@ $list-wp-header-color:           $list-wp-text-color !default;
 // Windows No Lines List
 // --------------------------------------------------
 
-.list-wp[no-lines] .item,
-.list-wp[no-lines] .item .item-inner {
+.list-wp.no-lines .item,
+.list-wp.no-lines .item .item-inner {
   border-width: 0;
 }
 

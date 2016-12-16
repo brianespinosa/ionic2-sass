@@ -6,10 +6,14 @@
 // Generate Windows Icon Colors
 // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+body.wp {
 
-  .icon-wp-#{$color-name} {
-    color: $color-base;
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+
+    .ion-icon.#{$color-name} {
+      color: $color-base;
+    }
+
   }
 
 }

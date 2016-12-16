@@ -2,10 +2,14 @@
 // Windows Typography
 // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+body.wp {
 
-  .text-wp-#{$color-name} {
-    color: $color-base;
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+
+    .text.#{$color-name} {
+      color: $color-base;
+    }
+
   }
 
 }

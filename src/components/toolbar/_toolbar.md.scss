@@ -314,11 +314,11 @@ body.md {
     pointer-events: none;
   }
 
-  .bar-button[icon-only] {
+  .bar-button.icon-only {
     padding: 0;
   }
 
-  .bar-button[icon-only] ion-icon {
+  .bar-button.icon-only ion-icon {
     padding: 0 .1em;
 
     min-width: 28px;
@@ -348,6 +348,10 @@ body.md {
     font-size: 2.4rem;
     font-weight: normal;
     text-align: left;
+  }
+
+  .back-button-text {
+    display: none;
   }
 
 

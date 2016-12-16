@@ -23,13 +23,13 @@
   padding-left: .4em;
 }
 
-.button[icon-only] {
+.button.icon-only {
   padding: 0;
 
   min-width: .9em;
 }
 
-[icon-only] ion-icon {
+.icon-only ion-icon {
   padding: 0 .5em;
 
   font-size: 1.8em;

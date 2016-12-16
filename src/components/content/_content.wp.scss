@@ -1,15 +1,19 @@
 @import "../../themes/ionic.globals.wp";
 
-// Windows Content
-// --------------------------------------------------
+body.wp {
 
-.content-wp {
-  color: $text-wp-color;
-  background-color: $background-wp-color;
-}
+  // Windows Content
+  // --------------------------------------------------
 
-.content-wp hr {
-  background-color: rgba(0, 0, 0, .08);
+  .content {
+    color: $text-wp-color;
+    background-color: $background-wp-color;
+  }
+
+  .content hr {
+    background-color: rgba(0, 0, 0, .08);
+  }
+
 }
 
 

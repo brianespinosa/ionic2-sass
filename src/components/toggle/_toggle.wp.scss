@@ -156,7 +156,7 @@ $toggle-wp-item-right-padding:           12px ($item-wp-padding-right / 2) 12px 
   cursor: pointer;
 }
 
-.item-wp .toggle-wp[item-left] {
+.item-wp .toggle-wp.item-left {
   padding: $toggle-wp-item-left-padding;
 }
 

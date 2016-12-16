@@ -2,10 +2,14 @@
 // Material Design Typography
 // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+body.md {
 
-  .text-md-#{$color-name} {
-    color: $color-base;
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+
+    .text.#{$color-name} {
+      color: $color-base;
+    }
+
   }
 
 }

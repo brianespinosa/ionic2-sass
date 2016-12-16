@@ -39,6 +39,6 @@ $datetime-wp-border-color:        $input-wp-border-color !default;
   line-height: 3rem;
 }
 
-.item-datetime .datetime-wp ion-label[floating] {
+.item-datetime .datetime-wp ion-label.floating {
   transform: translate3d(8px, 41px, 0);
 }

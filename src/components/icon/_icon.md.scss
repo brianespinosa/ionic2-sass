@@ -6,10 +6,14 @@
 // Generate Material Design Icon Colors
 // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+body.md {
 
-  .icon-md-#{$color-name} {
-    color: $color-base;
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+
+    .ion-icon.#{$color-name} {
+      color: $color-base;
+    }
+
   }
 
 }

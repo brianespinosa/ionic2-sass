@@ -30,7 +30,8 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: 'examples',
       routes: {
-        "/css": "css"
+        "/css": "css",
+        "/fonts": "fonts"
       }
     },
   })

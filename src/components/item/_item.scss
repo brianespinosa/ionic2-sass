@@ -69,8 +69,8 @@
   text-overflow: ellipsis;
 }
 
-.item[no-lines],
-.item.item[no-lines] .item-inner {
+.item.no-lines,
+.item.item.no-lines .item-inner {
   border: 0;
 }
 
@@ -78,7 +78,7 @@ ion-item-group {
   display: block;
 }
 
-ion-item-divider {
+.ion-item-divider {
   z-index: $z-index-item-divider;
   display: flex;
   overflow: hidden;
@@ -94,13 +94,12 @@ ion-item-divider {
   min-height: 30px;
 }
 
-ion-item-divider[sticky] {
+.ion-item-divider.sticky {
   position: sticky;
   top: 0;
 }
 
-[vertical-align-top],
-ion-input.item {
+.vertical-align-top,
+.ion-input.item {
   align-items: flex-start;
 }
-

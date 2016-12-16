@@ -86,7 +86,7 @@ $radio-ios-item-right-margin:      $item-ios-padding-media-top 11px $item-ios-pa
 
   margin: $radio-ios-item-right-margin;
 
-  &[item-left] {
+  &.item-left {
     margin: $radio-ios-item-left-margin;
   }
 }

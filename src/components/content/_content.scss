@@ -72,7 +72,7 @@ a {
   display: block;
 }
 
-[ion-fixed] {
+.ion-fixed {
   position: absolute;
 
   z-index: $z-index-fixed-content;
@@ -84,14 +84,33 @@ a {
 // Content Padding
 // --------------------------------------------------
 
-$header-height: 45px;
+$header-height-ios: 64px;
+$header-height-md: 76px;
+$header-height-wp: 66px;
 
-.padding.header-padding {
-  margin-top: $header-height; // ios right now
+body {
+  &.ios {
+    .header-padding {
+      margin-top: $header-height-ios; // ios right now
+    }
+  }
+
+  &.md {
+    .header-padding {
+      margin-top: $header-height-md; // ios right now
+    }
+  }
+
+  &.wp {
+    .header-padding {
+      margin-top: $header-height-wp; // ios right now
+    }
+  }
 }
 
-body [no-padding],
-body [no-padding] .scroll-content {
+
+body .no-padding,
+body .no-padding .scroll-content {
   padding: 0;
 }
 
@@ -138,8 +157,8 @@ body [no-padding] .scroll-content {
 // Content Margin
 // --------------------------------------------------
 
-body [no-margin],
-body [no-margin] .scroll-content {
+body .no-margin,
+body .no-margin .scroll-content {
   margin: 0;
 }
 
