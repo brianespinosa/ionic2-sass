@@ -8,121 +8,177 @@
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
-</head>
-<body class="ios">
-  <h1>Buttons</h1>
-  <h4>Basic Usage</h4>
-  <button class="button">
-    <span class="button-inner">Button</span>
-    <div class="button-effect"></div>
-  </button>
 
-  <hr>
-  <button class="button light">
-    <span class="button-inner">Light</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button default">
-    <span class="button-inner">Default</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button secondary">
-    <span class="button-inner">Secondary</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button danger">
-    <span class="button-inner">Danger</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button dark">
-    <span class="button-inner">Dark</span>
-    <div class="button-effect"></div>
-  </button>
-  <h4>Outline Style</h4>
-  <button class="button button-outline light">
-    <span class="button-inner">Light</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-outline default">
-    <span class="button-inner">Default</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-outline secondary">
-    <span class="button-inner">Secondary</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-outline danger">
-    <span class="button-inner">Danger</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-outline dark">
-    <span class="button-inner">Dark</span>
-    <div class="button-effect"></div>
-  </button>
-  <h4>Clear Style</h4>
-  <button class="button button-clear light">
-    <span class="button-inner">Light</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-clear default">
-    <span class="button-inner">Default</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-clear secondary">
-    <span class="button-inner">Secondary</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-clear danger">
-    <span class="button-inner">Danger</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-clear dark">
-    <span class="button-inner">Dark</span>
-    <div class="button-effect"></div>
-  </button>
-  <h4>Round Buttons</h4>
-  <button class="button button-round light">
-    <span class="button-inner">Light</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-round default">
-    <span class="button-inner">Default</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-round secondary">
-    <span class="button-inner">Secondary</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-round danger">
-    <span class="button-inner">Danger</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-round dark">
-    <span class="button-inner">Dark</span>
-    <div class="button-effect"></div>
-  </button>
-  <h4>Block Button</h4>
-  <button class="button button-block">
-    <span class="button-inner">Block Button</span>
-    <div class="button-effect"></div>
-  </button>
-  <h4>Full Button</h4>
-  <button class="button button-full">
-    <span class="button-inner">Full Button</span>
-    <div class="button-effect"></div>
-  </button>
-  <h4>Button Sizes</h4>
-  <button class="button button-small">
-    <span class="button-inner">Small Button</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-medium">
-    <span class="button-inner">Medium Button</span>
-    <div class="button-effect"></div>
-  </button>
-  <button class="button button-large">
-    <span class="button-inner">Large Button</span>
-    <div class="button-effect"></div>
-  </button>
+  <script type="text/javascript" src="/inobounce.min.js">
+
+  </script>
+</head>
+<body class="wp">
+  <div class="ion-page show-page">
+
+    <!--<div class="ion-header">
+      <div class="ion-navbar toolbar statusbar-padding">
+        <div class="toolbar-background"></div>
+        <button class="back-button bar-button bar-button-default show-back-button">
+          <span class="button-inner">
+            <span class="button-inner">
+              <div class="ion-icon back-button-icon icon icon-ios back-button-icon-ios ion-ios-arrow-back" role="img" aria-label="arrow back"></div>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </button>
+        <div class="toolbar-content toolbar-content-ios">
+          <div class="ion-title">
+            <div class="toolbar-title">Buttons</div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+
+
+
+
+    <div class="ion-header">
+      <div class="ion-navbar toolbar statusbar-padding">
+        <div class="toolbar-background"></div>
+        <button class="back-button bar-button default show-back-button">
+          <span class="button-inner">
+            <span class="button-inner">
+              <ion-icon class="back-button-icon icon icon-ios back-button-icon-ios ion-ios-arrow-back" role="img" aria-label="arrow back"></ion-icon>
+              <span class="back-button-text" style="transform: translateX(0px);">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </button>
+        <div class="toolbar-content toolbar-content-ios">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              Buttons
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="ion-content padding header-padding">
+      <h4>Basic Usage</h4>
+      <button class="button">
+        <span class="button-inner">Button</span>
+        <div class="button-effect"></div>
+      </button>
+
+      <hr>
+      <button class="button light">
+        <span class="button-inner">Light</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button default">
+        <span class="button-inner">Default</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button secondary">
+        <span class="button-inner">Secondary</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button danger">
+        <span class="button-inner">Danger</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button dark">
+        <span class="button-inner">Dark</span>
+        <div class="button-effect"></div>
+      </button>
+      <h4>Outline Style</h4>
+      <button class="button button-outline light">
+        <span class="button-inner">Light</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-outline default">
+        <span class="button-inner">Default</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-outline secondary">
+        <span class="button-inner">Secondary</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-outline danger">
+        <span class="button-inner">Danger</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-outline dark">
+        <span class="button-inner">Dark</span>
+        <div class="button-effect"></div>
+      </button>
+      <h4>Clear Style</h4>
+      <button class="button button-clear light">
+        <span class="button-inner">Light</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-clear default">
+        <span class="button-inner">Default</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-clear secondary">
+        <span class="button-inner">Secondary</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-clear danger">
+        <span class="button-inner">Danger</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-clear dark">
+        <span class="button-inner">Dark</span>
+        <div class="button-effect"></div>
+      </button>
+      <h4>Round Buttons</h4>
+      <button class="button button-round light">
+        <span class="button-inner">Light</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-round default">
+        <span class="button-inner">Default</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-round secondary">
+        <span class="button-inner">Secondary</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-round danger">
+        <span class="button-inner">Danger</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-round dark">
+        <span class="button-inner">Dark</span>
+        <div class="button-effect"></div>
+      </button>
+      <h4>Block Button</h4>
+      <button class="button button-block">
+        <span class="button-inner">Block Button</span>
+        <div class="button-effect"></div>
+      </button>
+      <h4>Full Button</h4>
+      <button class="button button-full">
+        <span class="button-inner">Full Button</span>
+        <div class="button-effect"></div>
+      </button>
+      <h4>Button Sizes</h4>
+      <button class="button button-small">
+        <span class="button-inner">Small Button</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-medium">
+        <span class="button-inner">Medium Button</span>
+        <div class="button-effect"></div>
+      </button>
+      <button class="button button-large">
+        <span class="button-inner">Large Button</span>
+        <div class="button-effect"></div>
+      </button>
+    </div> <!-- content -->
+  </div>
 </body>
 </html>

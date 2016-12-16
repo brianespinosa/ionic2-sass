@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -11,6 +12,12 @@ gulp.task('sass', function () {
 //      outputStyle: 'compressed'
       includePaths: ['node_modules/ionicons/dist/scss']
     }).on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({
       stream: true

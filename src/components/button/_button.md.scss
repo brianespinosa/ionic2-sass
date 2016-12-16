@@ -274,8 +274,8 @@ body.md {
   // --------------------------------------------------
 
   .button-full {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: -$content-padding;
+    margin-left: -$content-padding;
 
     border-right-width: 0;
     border-left-width: 0;

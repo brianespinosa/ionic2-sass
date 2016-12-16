@@ -3,7 +3,7 @@
 // Toolbar
 // --------------------------------------------------
 
-ion-toolbar {
+.ion-toolbar {
   position: relative;
   z-index: $z-index-toolbar;
 }
@@ -38,7 +38,7 @@ ion-toolbar {
   contain: strict;
 }
 
-ion-title {
+.ion-title {
   display: flex;
 
   flex: 1;
@@ -57,7 +57,7 @@ ion-title {
   white-space: nowrap;
 }
 
-ion-buttons {
+.ion-buttons {
   display: block;
 
   margin: 0 .2rem;
@@ -67,11 +67,11 @@ ion-buttons {
   pointer-events: none;
 }
 
-ion-buttons button,
-ion-buttons a,
-ion-buttons input,
-ion-buttons textarea,
-ion-buttons div {
+.ion-buttons button,
+.ion-buttons a,
+.ion-buttons input,
+.ion-buttons textarea,
+.ion-buttons div {
   pointer-events: auto;
 }
 
@@ -86,7 +86,7 @@ ion-buttons div {
 
 
 // TODO this is a temp hack to fix segment overlapping ion-nav-item
-ion-buttons,
+.ion-buttons,
 .bar-button-menutoggle {
   z-index: 99;
 
@@ -97,7 +97,7 @@ ion-buttons,
 // Navbar
 // --------------------------------------------------
 
-ion-navbar.toolbar {
+.ion-navbar.toolbar {
   display: flex;
 
   transform: translateZ(0);

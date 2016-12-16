@@ -70,7 +70,7 @@ button[disabled],
 
   width: 100%;
 
-  contain: strict;
+//  contain: strict;
 }
 
 .button-block::after {
@@ -84,9 +84,9 @@ button[disabled],
 .button-full {
   display: block;
 
-  width: 100%;
+  width: calc(100% + #{$content-padding * 2});
 
-  contain: strict;
+//  contain: strict;
 }
 
 // Full Outline Button

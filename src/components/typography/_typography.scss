@@ -115,37 +115,45 @@ sub {
 // Text Alignment
 // --------------------------------------------------
 
-[text-left] {
+[text-left],
+.text-left {
   text-align: left;
 }
 
-[text-center] {
+[text-center],
+.text-center {
   text-align: center;
 }
 
-[text-right] {
+[text-right],
+.text-right {
   text-align: right;
 }
 
-[text-justify] {
+[text-justify],
+.text-justify {
   text-align: justify;
 }
 
-[text-nowrap] {
+[text-nowrap],
+.text-nowrap {
   white-space: nowrap;
 }
 
 // Text Transformation
 // --------------------------------------------------
 
-[text-uppercase] {
+[text-uppercase],
+.text-uppercase {
   text-transform: uppercase;
 }
 
-[text-lowercase] {
+[text-lowercase],
+.text-lowercase {
   text-transform: lowercase;
 }
 
-[text-capitalize] {
+[text-capitalize],
+.text-capitalize {
   text-transform: capitalize;
 }
