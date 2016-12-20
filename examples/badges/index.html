@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-  <title>Demo</title>
+  <title>Badges</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
-</head>
-<body>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+</head>
+<body class="ios">
+  <div class="ion-page show-page">
+
+    <div class="ion-header">
+      <div class="ion-navbar toolbar statusbar-padding">
+        <div class="toolbar-background"></div>
+        <a class="back-button bar-button default show-back-button" href="/">
+          <span class="button-inner">
+            <span class="button-inner">
+              <i class="ion-icon back-button-icon ion-ios-arrow-back show-wp" role="img" aria-label="arrow back"></i>
+              <i class="ion-icon back-button-icon ion-md-arrow-back" role="img" aria-label="arrow back"></i>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="toolbar-content">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              Badges
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ion-content header-padding">
+      <h4 class="padding">Basic Usage</h4>
+
+      <div class="ion-card card">
+        <img src="https://unsplash.it/600/390/?random">
+        <div class="ion-card-content card-content">
+          <div class="ion-card-title card-title">
+            Björk
+          </div>
+          <p>
+            Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
+          </p>
+        </div>
+
+        <div class="ion-item item item-block">
+          <i name="musical-notes" role="img" style="color: #d03e84" class="ion-icon icon ion-ios-musical-notes item-icon item-left show-all" aria-label="musical notes"></i>
+          <div class="item-inner">
+            <div class="input-wrapper">
+              <div class="ion-label label">
+                Albums
+              </div>
+            </div>
+            <div class="ion-badge badge item-right">9</div>
+          </div>
+          <div class="button-effect"></div>
+        </div>
+        <div class="ion-item item item-block">
+          <i name="logo-twitter" role="img" style="color: #55acee"  class="ion-icon icon ion-logo-twitter item-icon item-left show-all" aria-label="logo twitter"></i>
+          <div class="item-inner">
+            <div class="input-wrapper">
+              <div class="ion-label label">
+                Followers
+              </div>
+            </div>
+            <div class="ion-badge badge item-right">260k</div>
+          </div>
+          <div class="button-effect"></div>
+        </div>
+
+      </div>
+
+    </div> <!-- content -->
+  </div>
 </body>
 </html>

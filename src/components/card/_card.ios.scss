@@ -75,138 +75,141 @@ $card-ios-header-padding:              16px !default;
 /// @prop - Color of the card header
 $card-ios-header-color:                #333 !default;
 
+body.ios {
 
-.card-ios {
-  margin: $card-ios-margin-top $card-ios-margin-right $card-ios-margin-bottom $card-ios-margin-left;
+  .card {
+    margin: $card-ios-margin-top $card-ios-margin-right $card-ios-margin-bottom $card-ios-margin-left;
 
-  width: calc(100% - #{($card-ios-margin-right + $card-ios-margin-left)});
+    width: calc(100% - #{($card-ios-margin-right + $card-ios-margin-left)});
 
-  border-radius: $card-ios-border-radius;
-  font-size: $card-ios-font-size;
+    border-radius: $card-ios-border-radius;
+    font-size: $card-ios-font-size;
 
-  background: $card-ios-background-color;
-  box-shadow: $card-ios-box-shadow;
-}
-
-.card-ios ion-list {
-  margin-bottom: 0;
-}
-
-.card-ios > .item:last-child,
-.card-ios > .item:last-child .item-inner,
-.card-ios > .item-wrapper:last-child .item {
-  border-bottom: 0;
-}
-
-.card-ios .item-ios.item-block .item-inner {
-  border: 0;
-}
-
-.card-content-ios {
-  padding: $card-ios-padding-top $card-ios-padding-right $card-ios-padding-bottom $card-ios-padding-left;
-
-  font-size: $card-ios-font-size;
-  line-height: 1.4;
-}
-
-.card-header-ios {
-  padding: $card-ios-header-padding;
-
-  font-size: $card-ios-header-font-size;
-  font-weight: $card-ios-header-font-weight;
-  color: $card-ios-header-color;
-}
-
-.card-header-ios + .card-content-ios,
-.card-ios .item + .card-content-ios {
-  padding-top: 0;
-}
-
-.card .note-ios {
-  font-size: 1.3rem;
-}
-
-.card-title-ios {
-  display: block;
-
-  margin: $card-ios-title-margin;
-  padding: $card-ios-title-padding;
-
-  font-size: $card-ios-title-font-size;
-  line-height: 1.2;
-  color: $card-ios-title-text-color;
-}
-
-.card-ios h1 {
-  margin: 0 0 2px;
-
-  font-size: 2.4rem;
-  font-weight: normal;
-}
-
-.card-ios h2 {
-  margin: 2px 0;
-
-  font-size: 1.6rem;
-  font-weight: normal;
-}
-
-.card-ios h3,
-.card-ios h4,
-.card-ios h5,
-.card-ios h6 {
-  margin: 2px 0;
-
-  font-size: 1.4rem;
-  font-weight: normal;
-}
-
-.card-ios p {
-  margin: 0 0 2px;
-
-  font-size: 1.4rem;
-  color: $card-ios-text-color;
-}
-
-.card-ios + ion-card {
-  margin-top: 0;
-}
-
-
-// Generate iOS Card Colors
-// --------------------------------------------------
-
-@each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
-
-  .card-ios .text-ios-#{$color-name} {
-    color: $color-base;
+    background: $card-ios-background-color;
+    box-shadow: $card-ios-box-shadow;
   }
 
-  .card-ios-#{$color-name} {
-    color: $color-contrast;
-    background-color: $color-base;
+  .card .ion-list {
+    margin-bottom: 0;
+  }
 
-    .card-header-ios,
-    .card-title-ios,
-    .card-content-ios,
-    p {
-      color: $color-contrast;
+  .card > .item:last-child,
+  .card > .item:last-child .item-inner,
+  .card > .item-wrapper:last-child .item {
+    border-bottom: 0;
+  }
+
+  .card .item.item-block .item-inner {
+    border: 0;
+  }
+
+  .card-content {
+    padding: $card-ios-padding-top $card-ios-padding-right $card-ios-padding-bottom $card-ios-padding-left;
+
+    font-size: $card-ios-font-size;
+    line-height: 1.4;
+  }
+
+  .card-header {
+    padding: $card-ios-header-padding;
+
+    font-size: $card-ios-header-font-size;
+    font-weight: $card-ios-header-font-weight;
+    color: $card-ios-header-color;
+  }
+
+  .card-header + .card-content,
+  .card .item + .card-content {
+    padding-top: 0;
+  }
+
+  .card .note {
+    font-size: 1.3rem;
+  }
+
+  .card-title {
+    display: block;
+
+    margin: $card-ios-title-margin;
+    padding: $card-ios-title-padding;
+
+    font-size: $card-ios-title-font-size;
+    line-height: 1.2;
+    color: $card-ios-title-text-color;
+  }
+
+  .card h1 {
+    margin: 0 0 2px;
+
+    font-size: 2.4rem;
+    font-weight: normal;
+  }
+
+  .card h2 {
+    margin: 2px 0;
+
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+
+  .card h3,
+  .card h4,
+  .card h5,
+  .card h6 {
+    margin: 2px 0;
+
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  .card p {
+    margin: 0 0 2px;
+
+    font-size: 1.4rem;
+    color: $card-ios-text-color;
+  }
+
+  .card + .ion-card {
+    margin-top: 0;
+  }
+
+
+  // Generate iOS Card Colors
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+
+    .card .text.#{$color-name} {
+      color: $color-base;
     }
 
-    @each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
-      .text-ios-#{$color-name},
-      .card-header-ios-#{$color-name},
-      .card-title-ios-#{$color-name},
-      .card-content-ios-#{$color-name} {
-        color: $color-base;
+    .card.#{$color-name} {
+      color: $color-contrast;
+      background-color: $color-base;
+
+      .card-header,
+      .card-title,
+      .card-content,
+      p {
+        color: $color-contrast;
+      }
+
+      @each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+        .text.#{$color-name},
+        .card-header.#{$color-name},
+        .card-title.#{$color-name},
+        .card-content.#{$color-name} {
+          color: $color-base;
+        }
       }
     }
-  }
 
-  .card-header-ios-#{$color-name},
-  .card-title-ios-#{$color-name},
-  .card-content-ios-#{$color-name} {
-    color: $color-base;
+    .card-header.#{$color-name},
+    .card-title.#{$color-name},
+    .card-content.#{$color-name} {
+      color: $color-base;
+    }
+
   }
 
 }

@@ -81,149 +81,152 @@ $card-wp-header-padding:              16px !default;
 /// @prop - Color of the card header
 $card-wp-header-color:                #222 !default;
 
+body.wp {
 
-.card-wp {
-  margin: $card-wp-margin-top $card-wp-margin-right $card-wp-margin-bottom $card-wp-margin-left;
+  .card {
+    margin: $card-wp-margin-top $card-wp-margin-right $card-wp-margin-bottom $card-wp-margin-left;
 
-  width: calc(100% - #{($card-wp-margin-right + $card-wp-margin-left)});
+    width: calc(100% - #{($card-wp-margin-right + $card-wp-margin-left)});
 
-  border-radius: $card-wp-border-radius;
-  font-size: $card-wp-font-size;
+    border-radius: $card-wp-border-radius;
+    font-size: $card-wp-font-size;
 
-  background: $card-wp-background-color;
-  box-shadow: $card-wp-box-shadow;
-}
-
-.card-wp ion-list {
-  margin-bottom: 0;
-}
-
-.card-wp > .item:last-child,
-.card-wp > .item:last-child .item-inner,
-.card-wp > .item-wrapper:last-child .item {
-  border-bottom: 0;
-}
-
-.card-wp .item-wp.item-block .item-inner {
-  border: 0;
-}
-
-.card-content-wp {
-  padding: $card-wp-padding-top $card-wp-padding-right $card-wp-padding-bottom $card-wp-padding-left;
-
-  font-size: $card-wp-font-size;
-  line-height: $card-wp-line-height;
-}
-
-.card-header-wp {
-  padding: $card-wp-header-padding;
-
-  font-size: $card-wp-header-font-size;
-
-  color: $card-wp-header-color;
-}
-
-.card-header-wp + .card-content-wp,
-.card-wp .item + .card-content-wp {
-  padding-top: 0;
-}
-
-.card .note-wp {
-  font-size: 1.3rem;
-}
-
-.card-title-wp {
-  display: block;
-
-  margin: $card-wp-title-margin;
-  padding: $card-wp-title-padding;
-
-  font-size: $card-wp-title-font-size;
-  line-height: 1.2;
-  color: $card-wp-title-text-color;
-}
-
-.card-wp h1 {
-  margin: 0 0 2px;
-
-  font-size: 2.4rem;
-  font-weight: normal;
-  color: $card-wp-text-color;
-}
-
-.card-wp h2 {
-  margin: 2px 0;
-
-  font-size: 1.6rem;
-  font-weight: normal;
-  color: $card-wp-text-color;
-}
-
-.card-wp h3,
-.card-wp h4,
-.card-wp h5,
-.card-wp h6 {
-  margin: 2px 0;
-
-  font-size: 1.4rem;
-  font-weight: normal;
-  color: $card-wp-text-color;
-}
-
-.card-wp p {
-  margin: 0 0 2px;
-
-  font-size: 1.4rem;
-  font-weight: normal;
-  line-height: 1.5;
-  color: $card-wp-text-color;
-}
-
-.card-wp + ion-card {
-  margin-top: 0;
-}
-
-
-// Generate Windows Card Colors
-// --------------------------------------------------
-
-@each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
-
-  .card-wp .text-wp-#{$color-name} {
-    color: $color-base;
+    background: $card-wp-background-color;
+    box-shadow: $card-wp-box-shadow;
   }
 
-  .card-wp-#{$color-name} {
-    color: $color-contrast;
-    background-color: $color-base;
+  .card .ion-list {
+    margin-bottom: 0;
+  }
 
-    .card-header-wp,
-    .card-title-wp,
-    .card-content-wp,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: $color-contrast;
+  .card > .item:last-child,
+  .card > .item:last-child .item-inner,
+  .card > .item-wrapper:last-child .item {
+    border-bottom: 0;
+  }
+
+  .card .item.item-block .item-inner {
+    border: 0;
+  }
+
+  .card-content {
+    padding: $card-wp-padding-top $card-wp-padding-right $card-wp-padding-bottom $card-wp-padding-left;
+
+    font-size: $card-wp-font-size;
+    line-height: $card-wp-line-height;
+  }
+
+  .card-header {
+    padding: $card-wp-header-padding;
+
+    font-size: $card-wp-header-font-size;
+
+    color: $card-wp-header-color;
+  }
+
+  .card-header + .card-content,
+  .card .item + .card-content {
+    padding-top: 0;
+  }
+
+  .card .note {
+    font-size: 1.3rem;
+  }
+
+  .card-title {
+    display: block;
+
+    margin: $card-wp-title-margin;
+    padding: $card-wp-title-padding;
+
+    font-size: $card-wp-title-font-size;
+    line-height: 1.2;
+    color: $card-wp-title-text-color;
+  }
+
+  .card h1 {
+    margin: 0 0 2px;
+
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: $card-wp-text-color;
+  }
+
+  .card h2 {
+    margin: 2px 0;
+
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: $card-wp-text-color;
+  }
+
+  .card h3,
+  .card h4,
+  .card h5,
+  .card h6 {
+    margin: 2px 0;
+
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: $card-wp-text-color;
+  }
+
+  .card p {
+    margin: 0 0 2px;
+
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: $card-wp-text-color;
+  }
+
+  .card + .ion-card {
+    margin-top: 0;
+  }
+
+
+  // Generate Windows Card Colors
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+
+    .card .text.#{$color-name} {
+      color: $color-base;
     }
 
-    @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
-      .text-wp-#{$color-name},
-      .card-header-wp-#{$color-name},
-      .card-title-wp-#{$color-name},
-      .card-content-wp-#{$color-name} {
-        color: $color-base;
+    .card.#{$color-name} {
+      color: $color-contrast;
+      background-color: $color-base;
+
+      .card-header,
+      .card-title,
+      .card-content,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        color: $color-contrast;
+      }
+
+      @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+        .text.#{$color-name},
+        .card-header.#{$color-name},
+        .card-title.#{$color-name},
+        .card-content.#{$color-name} {
+          color: $color-base;
+        }
       }
     }
-  }
 
-  .card-header-wp-#{$color-name},
-  .card-title-wp-#{$color-name},
-  .card-content-wp-#{$color-name} {
-    color: $color-base;
+    .card-header.#{$color-name},
+    .card-title.#{$color-name},
+    .card-content.#{$color-name} {
+      color: $color-base;
+    }
+
   }
 
 }
