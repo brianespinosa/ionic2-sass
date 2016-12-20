@@ -69,10 +69,18 @@ body.wp {
     color: $item-wp-body-text-color;
     background-color: $item-wp-body-background-color;
     box-shadow: none;
+
+    &.activated {
+      background-color: $list-wp-activated-background-color;
+    }
   }
 
-  .item.activated {
-    background-color: $list-wp-activated-background-color;
+  button.item,
+  a.item {
+    &:active {
+      background-color: $list-wp-activated-background-color;
+      transition-duration: 0ms;
+    }
   }
 
   .item.no-lines {

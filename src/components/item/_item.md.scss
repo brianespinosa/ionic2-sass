@@ -65,11 +65,20 @@ body.md {
     background-color: $list-md-background-color;
     box-shadow: none;
     transition: background-color 300ms cubic-bezier(.4, 0, .2, 1);
+
+    &.activated {
+      background-color: $list-md-activated-background-color;
+    }
   }
 
-  .item.activated {
-    background-color: $list-md-activated-background-color;
+  button.item,
+  a.item {
+    &:active {
+      background-color: $list-md-activated-background-color;
+      transition-duration: 0ms;
+    }
   }
+
 
   .item.no-lines {
     border-width: 0;
@@ -145,8 +154,8 @@ body.md {
     margin: $item-md-padding-media-top ($item-md-padding-right / 2) $item-md-padding-media-bottom 0;
   }
 
-  .item ion-icon.item-left,
-  .item ion-icon.item-right {
+  .item .ion-icon.item-left,
+  .item .ion-icon.item-right {
     margin-top: $item-md-padding-icon-top;
     margin-bottom: $item-md-padding-icon-bottom;
     margin-left: 0;

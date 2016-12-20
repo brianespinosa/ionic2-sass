@@ -22,22 +22,22 @@ $select-ios-icon-color:          #999 !default;
 $select-ios-placeholder-color:   $select-ios-icon-color !default;
 
 
-.select-ios {
+.select {
   padding: $select-ios-padding-top $select-ios-padding-right  $select-ios-padding-bottom $select-ios-padding-left;
 }
 
-.select-ios .select-placeholder {
+.select .select-placeholder {
   color: $select-ios-placeholder-color;
 }
 
-.select-ios .select-icon {
+.select .select-icon {
   position: relative;
 
   width: 12px;
   height: 18px;
 }
 
-.select-ios .select-icon .select-icon-inner {
+.select .select-icon .select-icon-inner {
   position: absolute;
   top: 50%;
   left: 5px;

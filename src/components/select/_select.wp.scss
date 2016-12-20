@@ -40,7 +40,7 @@ $select-wp-icon-color:          $select-wp-border-color !default;
 $select-wp-placeholder-color:   $select-wp-icon-color !default;
 
 
-.select-wp {
+.select {
   flex: 1;
 
   margin: $select-wp-margin-top $select-wp-margin-right $select-wp-margin-bottom $select-wp-margin-left;
@@ -52,7 +52,7 @@ $select-wp-placeholder-color:   $select-wp-icon-color !default;
   line-height: 3rem;
 }
 
-.select-wp .select-placeholder {
+.select .select-placeholder {
   color: $select-wp-placeholder-color;
 }
 
@@ -60,7 +60,7 @@ $select-wp-placeholder-color:   $select-wp-icon-color !default;
   margin-left: 0;
 }
 
-.select-wp .select-icon {
+.select .select-icon {
   position: relative;
 
   align-self: center;
@@ -69,7 +69,7 @@ $select-wp-placeholder-color:   $select-wp-icon-color !default;
   height: $select-wp-icon-width;
 }
 
-.select-wp .select-icon .select-icon-inner {
+.select .select-icon .select-icon-inner {
   position: absolute;
   top: 3px;
   left: 5px;
@@ -86,6 +86,6 @@ $select-wp-placeholder-color:   $select-wp-icon-color !default;
   pointer-events: none;
 }
 
-.select-wp .select-text {
+.select .select-text {
   min-height: 3rem;
 }

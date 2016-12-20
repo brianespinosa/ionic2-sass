@@ -148,17 +148,17 @@ body.ios {
 
       color: $button-ios-text-color;
       background-color: $button-ios-background-color;
-    }
 
-    .button.activated {
-      background-color: $button-ios-background-color-activated;
-      opacity: $button-ios-opacity-activated;
-    }
+      &.activated,
+      &:active {
+        background-color: $button-ios-background-color-activated;
+        opacity: $button-ios-opacity-activated;
+      }
 
-    .button:hover:not(.disable-hover) {
-      opacity: $button-ios-opacity-hover;
+      &:hover:not(.disable-hover) {
+        opacity: $button-ios-opacity-hover;
+      }
     }
-
 
   // iOS Default Button Color Mixin
   // --------------------------------------------------
@@ -171,10 +171,11 @@ body.ios {
     .button.#{$color-name} {
       color: $fg-color;
       background-color: $bg-color;
-    }
 
-    .button.#{$color-name}.activated {
-      background-color: $bg-color-activated;
+      &.activated,
+      &:active {
+        background-color: $bg-color-activated;
+      }
     }
   }
 
@@ -232,13 +233,15 @@ body.ios {
     border-color: $button-ios-outline-border-color;
     color: $button-ios-outline-text-color;
     background-color: $button-ios-outline-background-color;
+
+    &.activated,
+    &:active {
+      color: $button-ios-outline-text-color-activated;
+      background-color: $button-ios-outline-background-color-activated;
+      opacity: $button-ios-outline-opacity-activated;
+    }
   }
 
-  .button-outline.activated {
-    color: $button-ios-outline-text-color-activated;
-    background-color: $button-ios-outline-background-color-activated;
-    opacity: $button-ios-outline-opacity-activated;
-  }
 
   // iOS Outline Button Color Mixin
   // --------------------------------------------------
@@ -249,13 +252,13 @@ body.ios {
       border-color: $color-base;
       color: $color-base;
       background-color: $button-ios-outline-background-color;
-    }
 
-    .button-outline.#{$color-name}.activated {
-      color: $color-contrast;
-      background-color: $color-base;
+      &.activated,
+      &:active {
+        color: $color-contrast;
+        background-color: $color-base;
+      }
     }
-
   }
 
 
@@ -266,16 +269,17 @@ body.ios {
     border-color: $button-ios-clear-border-color;
     color: $button-ios-background-color;
     background-color: $button-ios-clear-background-color;
-  }
 
-  .button-clear.activated {
-    background-color: $button-ios-clear-background-color-activated;
-    opacity: $button-ios-clear-opacity-activated;
-  }
+    &.activated,
+    &:active {
+      background-color: $button-ios-clear-background-color-activated;
+      opacity: $button-ios-clear-opacity-activated;
+    }
 
-  .button-clear:hover:not(.disable-hover) {
-    color: $button-ios-clear-text-color-hover;
-    opacity: $button-ios-clear-opacity-hover;
+    &:hover:not(.disable-hover) {
+      color: $button-ios-clear-text-color-hover;
+      opacity: $button-ios-clear-opacity-hover;
+    }
   }
 
 
@@ -289,14 +293,15 @@ body.ios {
       border-color: $button-ios-clear-border-color;
       color: $fg-color;
       background-color: $button-ios-clear-background-color;
-    }
 
-    .button-clear.#{$color-name}.activated {
-      opacity: $button-ios-clear-opacity-activated;
-    }
+      &.activated,
+      &:active {
+        opacity: $button-ios-clear-opacity-activated;
+      }
 
-    .button-clear.#{$color-name}:hover:not(.disable-hover) {
-      color: $fg-color;
+      &:hover:not(.disable-hover) {
+        color: $fg-color;
+      }
     }
   }
 

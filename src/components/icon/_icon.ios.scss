@@ -8,6 +8,11 @@
 
 body.ios {
 
+  i[class*="ion-md"]:not(.show-ios):not(.show-all),
+  i[class*='ion-wp']:not(.show-ios):not(.show-all) {
+    display: none;
+  }
+
   @each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
 
     .ion-icon.#{$color-name} {
@@ -15,5 +20,5 @@ body.ios {
     }
 
   }
-  
+
 }

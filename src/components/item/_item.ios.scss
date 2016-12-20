@@ -57,12 +57,21 @@ body.ios {
     color: $list-ios-text-color;
     background-color: $list-ios-background-color;
     transition: background-color 200ms linear;
+
+    &.activated {
+      background-color: $list-ios-activated-background-color;
+      transition-duration: 0ms;
+    }
   }
 
-  .item.activated {
-    background-color: $list-ios-activated-background-color;
-    transition-duration: 0ms;
+  button.item,
+  a.item {
+    &:active {
+      background-color: $list-ios-activated-background-color;
+      transition-duration: 0ms;
+    }
   }
+
 
   .item h1 {
     margin: 0 0 2px;

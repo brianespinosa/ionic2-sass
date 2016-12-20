@@ -13,8 +13,8 @@ $text-input-highlight-color-invalid:     #f53d3d !default;
 // Input/Textarea Wrapper
 // --------------------------------------------------
 
-ion-input,
-ion-textarea {
+.ion-input,
+.ion-textarea {
   position: relative;
   display: block;
 
@@ -24,8 +24,8 @@ ion-textarea {
 }
 
 
-.item-input ion-input,
-.item-input ion-textarea {
+.item-input .ion-input,
+.item-input .ion-textarea {
   position: static;
 }
 
@@ -117,7 +117,7 @@ input.text-input:-webkit-autofill {
 // This input is used to help the app handle
 // Next and Previous input tabbing
 
-[next-input] {
+.next-input {
   position: absolute;
   bottom: 20px;
 
