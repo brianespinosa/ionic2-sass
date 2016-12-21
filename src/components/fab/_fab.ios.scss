@@ -21,42 +21,49 @@ $fab-ios-list-button-text-color:                  color-contrast($colors-ios, $f
 /// @prop - Background color of the activated button in a list
 $fab-ios-list-button-background-color-activated:  color-shade($fab-ios-list-button-background-color) !default;
 
+body.ios {
 
-.fab-ios {
-  color: $fab-ios-text-color;
-  background-color: $fab-ios-background-color;
-}
+  .fab {
+    color: $fab-ios-text-color;
+    background-color: $fab-ios-background-color;
 
-.fab-ios.activated {
-  background-color: $fab-ios-background-color-activated;
-}
-
-.fab-ios-in-list {
-  color: $fab-ios-list-button-text-color;
-  background-color: $fab-ios-list-button-background-color;
-}
-
-.fab-ios-in-list.activated {
-  background-color: $fab-ios-list-button-background-color-activated;
-}
-
-
-// Generate iOS FAB colors
-// --------------------------------------------------
-
-@each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
-
-  $bg-color: $color-base;
-  $bg-color-activated: color-shade($bg-color);
-  $fg-color: $color-contrast;
-
-  .fab-ios-#{$color-name} {
-    color: $fg-color;
-    background-color: $bg-color;
+    &.activated,
+    &:active {
+      background-color: $fab-ios-background-color-activated;
+    }
   }
 
-  .fab-ios-#{$color-name}.activated {
-    background-color: $bg-color-activated;
-  }
-}
+  .fab-in-list {
+    color: $fab-ios-list-button-text-color;
+    background-color: $fab-ios-list-button-background-color;
 
+    &.activated,
+    &:active {
+      background-color: $fab-ios-list-button-background-color-activated;
+    }
+  }
+
+
+  // Generate iOS FAB colors
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+
+    $bg-color: $color-base;
+    $bg-color-activated: color-shade($bg-color);
+    $fg-color: $color-contrast;
+
+    .fab.#{$color-name} {
+      color: $fg-color;
+      background-color: $bg-color;
+
+      &.activated,
+      &:active {
+        background-color: $bg-color-activated;
+      }
+
+    }
+
+  }
+
+}

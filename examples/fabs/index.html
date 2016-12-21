@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-  <title>Demo</title>
+  <title>FABs</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
-</head>
-<body>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+</head>
+<body class="ios">
+  <div class="ion-page show-page">
+
+    <div class="ion-header">
+      <div class="ion-navbar toolbar statusbar-padding">
+        <div class="toolbar-background"></div>
+        <a class="back-button bar-button default show-back-button" href="/">
+          <span class="button-inner">
+            <span class="button-inner">
+              <i class="ion-icon back-button-icon ion-ios-arrow-back show-wp" role="img" aria-label="arrow back"></i>
+              <i class="ion-icon back-button-icon ion-md-arrow-back" role="img" aria-label="arrow back"></i>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="toolbar-content">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              FABs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ion-content header-padding">
+      <h4 class="padding">Basic Usage</h4>
+
+      <div class="ion-fab middle right">
+        <button class="fab mini secondary" onclick="$(this).next().toggleClass('fab-list-active');$(this).toggleClass('fab-close-active');">
+          <i class="ion-icon fab-close-icon icon ion-md-close show-all" name="close" role="img" aria-label="close"></i>
+          <span class="button-inner">
+            <i name="add" role="img" class="ion-icon icon ion-md-arrow-dropleft show-all" aria-label="add"></i>
+          </span>
+          <div class="button-effect"></div>
+        </button>
+        <div class="ion-fab-list side-left">
+          <button class="fab fab-in-list show">
+            <i class="ion-icon fab-close-icon icon ion-md-close show-all" name="close" role="img" aria-label="close"></i>
+            <span class="button-inner">
+              <i name="logo-facebook" role="img" class="ion-icon icon ion-logo-facebook show-all" aria-label="logo facebook"></i>
+            </span>
+            <div class="button-effect"></div>
+          </button>
+          <button class="fab fab-in-list show">
+            <i class="ion-icon fab-close-icon icon icon-md ion-md-close show-all" name="close" role="img" aria-label="close"></i>
+            <span class="button-inner">
+              <i name="logo-twitter" role="img" class="ion-icon icon ion-logo-twitter show-all" aria-label="logo twitter"></i>
+            </span>
+            <div class="button-effect"></div>
+          </button>
+          <button class="fab fab-in-list show">
+            <i class="ion-icon fab-close-icon icon icon-md ion-md-close show-all" name="close" role="img" aria-label="close"></i>
+            <span class="button-inner">
+              <i name="logo-google" role="img" class="ion-icon icon ion-logo-google show-all" aria-label="logo google"></i>
+            </span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+
+    </div> <!-- content -->
+  </div>
 </body>
 </html>

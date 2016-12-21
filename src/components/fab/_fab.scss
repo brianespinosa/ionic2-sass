@@ -47,7 +47,7 @@ $fab-list-button-background-color:      #f4f4f4 !default;
   contain: strict;
 }
 
-.fab ion-icon {
+.fab .ion-icon {
   flex: 1;
 
   font-size: 2.4rem;
@@ -56,7 +56,7 @@ $fab-list-button-background-color:      #f4f4f4 !default;
 // FAB mini
 // --------------------------------------------------
 
-.fab[mini] {
+.fab.mini {
   margin: ($fab-size - $fab-mini-size) / 2;
 
   width: $fab-mini-size;
@@ -65,7 +65,7 @@ $fab-list-button-background-color:      #f4f4f4 !default;
   line-height: $fab-mini-size;
 }
 
-.fab[mini] .fab-close-icon {
+.fab.mini .fab-close-icon {
   line-height: $fab-mini-size;
 }
 
@@ -73,43 +73,43 @@ $fab-list-button-background-color:      #f4f4f4 !default;
 // FAB container
 // --------------------------------------------------
 
-ion-fab {
+.ion-fab {
   position: absolute;
   z-index: $z-index-fixed-content;
 
-  &[center] {
+  &.center {
     left: 50%;
 
     margin-left: -$fab-size / 2;
   }
 
-  &[middle] {
+  &.middle {
     top: 50%;
 
     margin-top: -$fab-size / 2;
   }
 
-  &[top] {
+  &.top {
     top: $fab-content-margin;
   }
 
-  &[right] {
+  &.right {
     right: $fab-content-margin;
   }
 
-  &[bottom] {
+  &.bottom {
     bottom: $fab-content-margin;
   }
 
-  &[left] {
+  &.left {
     left: $fab-content-margin;
   }
 
-  &[top][edge] {
+  &.top.edge {
     top: -$fab-size / 2;
   }
 
-  &[bottom][edge] {
+  &.bottom.edge {
     bottom: -$fab-size / 2;
   }
 }
@@ -118,7 +118,7 @@ ion-fab {
 // FAB list (speed dial)
 // --------------------------------------------------
 
-ion-fab-list {
+.ion-fab-list {
   position: absolute;
   top: 0;
   display: none;
@@ -132,7 +132,7 @@ ion-fab-list {
   min-height: $fab-size;
 }
 
-ion-fab-list .fab-in-list {
+.ion-fab-list .fab-in-list {
   margin: 8px 0;
 
   width: $fab-mini-size;
@@ -146,25 +146,25 @@ ion-fab-list .fab-in-list {
   transition-property: transform, opacity;
 }
 
-ion-fab-list .fab-in-list.show {
+.ion-fab-list .fab-in-list.show {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
 }
 
-ion-fab-list[side=left] .fab-in-list,
-ion-fab-list[side=right] .fab-in-list {
+.ion-fab-list.side-left .fab-in-list,
+.ion-fab-list.side-right .fab-in-list {
   margin: 0 8px;
 }
 
-ion-fab-list[side=top] {
+.ion-fab-list.side-top {
   top: auto;
   bottom: 0;
 
   flex-direction: column-reverse;
 }
 
-ion-fab-list[side=left] {
+.ion-fab-list.side-left {
   right: 0;
 
   flex-direction: row-reverse;
@@ -172,7 +172,7 @@ ion-fab-list[side=left] {
   margin: 0 $fab-size + $fab-list-margin;
 }
 
-ion-fab-list[side=right] {
+.ion-fab-list.side-right {
   left: 0;
 
   flex-direction: row;

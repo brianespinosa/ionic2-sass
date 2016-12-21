@@ -21,41 +21,47 @@ $fab-wp-list-button-text-color:                   color-contrast($colors-wp, $fa
 /// @prop - Background color of the activated button in a list
 $fab-wp-list-button-background-color-activated:   color-shade($fab-wp-list-button-background-color) !default;
 
+body.wp {
 
-.fab-wp {
-  color: $fab-wp-text-color;
-  background-color: $fab-wp-background-color;
-}
+  .fab {
+    color: $fab-wp-text-color;
+    background-color: $fab-wp-background-color;
 
-.fab-wp.activated {
-  background-color: $fab-wp-background-color-activated;
-}
-
-.fab-wp-in-list {
-  color: $fab-wp-list-button-text-color;
-  background-color: $fab-wp-list-button-background-color;
-}
-
-.fab-wp-in-list.activated {
-  background-color: $fab-wp-list-button-background-color-activated;
-}
-
-
-// Generate WP FAB colors
-// --------------------------------------------------
-
-@each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
-
-  $bg-color: $color-base;
-  $bg-color-activated: color-shade($bg-color);
-  $fg-color: $color-contrast;
-
-  .fab-wp-#{$color-name} {
-    color: $fg-color;
-    background-color: $bg-color;
+    &.activated,
+    &:active {
+      background-color: $fab-wp-background-color-activated;
+    }
   }
 
-  .fab-wp-#{$color-name}.activated {
-    background-color: $bg-color-activated;
+  .fab-in-list {
+    color: $fab-wp-list-button-text-color;
+    background-color: $fab-wp-list-button-background-color;
+
+    &.activated,
+    &:active {
+      background-color: $fab-wp-list-button-background-color-activated;
+    }
+  }
+
+
+  // Generate WP FAB colors
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+
+    $bg-color: $color-base;
+    $bg-color-activated: color-shade($bg-color);
+    $fg-color: $color-contrast;
+
+    .fab.#{$color-name} {
+      color: $fg-color;
+      background-color: $bg-color;
+
+      &.activated,
+      &:active {
+        background-color: $bg-color-activated;
+      }
+    }
+
   }
 }

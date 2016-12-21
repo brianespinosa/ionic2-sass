@@ -27,53 +27,58 @@ $fab-md-list-button-text-color:                   color-contrast($colors-md, $fa
 /// @prop - Background color of the activated button in a list
 $fab-md-list-button-background-color-activated:   color-shade($fab-md-list-button-background-color) !default;
 
+body.md {
 
-.fab-md {
-  color: $fab-md-text-color;
-  background-color: $fab-md-background-color;
+  .fab {
+    color: $fab-md-text-color;
+    background-color: $fab-md-background-color;
 
-  box-shadow: $fab-md-box-shadow;
+    box-shadow: $fab-md-box-shadow;
 
-  transition: box-shadow $button-md-transition-duration $button-md-transition-timing-function,
-              background-color $button-md-transition-duration $button-md-transition-timing-function,
-              color $button-md-transition-duration $button-md-transition-timing-function;
-}
+    transition: box-shadow $button-md-transition-duration $button-md-transition-timing-function,
+                background-color $button-md-transition-duration $button-md-transition-timing-function,
+                color $button-md-transition-duration $button-md-transition-timing-function;
 
-.fab-md.activated {
-  background-color: $fab-md-background-color-activated;
-  box-shadow: $fab-md-box-shadow-activated;
-}
-
-.fab-md-in-list {
-  color: $fab-md-list-button-text-color;
-  background-color: $fab-md-list-button-background-color;
-}
-
-.fab-md-in-list.activated {
-  background-color: $fab-md-list-button-background-color-activated;
-}
-
-
-// Generate MD FAB colors
-// --------------------------------------------------
-
-@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
-
-  $bg-color: $color-base;
-  $bg-color-activated: color-shade($bg-color);
-  $fg-color: $color-contrast;
-
-  .fab-md-#{$color-name} {
-    color: $fg-color;
-    background-color: $bg-color;
+    &.activated,
+    &:active {
+      background-color: $fab-md-background-color-activated;
+      box-shadow: $fab-md-box-shadow-activated;
+    }
   }
 
-  .fab-md-#{$color-name}.activated {
-    background-color: $bg-color-activated;
+  .fab-in-list {
+    color: $fab-md-list-button-text-color;
+    background-color: $fab-md-list-button-background-color;
+
+    &.activated,
+    &:active {
+      background-color: $fab-md-list-button-background-color-activated;
+    }
   }
 
-  .fab-md-#{$color-name} .button-effect {
-    background-color: $fg-color;
+  // Generate MD FAB colors
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+
+    $bg-color: $color-base;
+    $bg-color-activated: color-shade($bg-color);
+    $fg-color: $color-contrast;
+
+    .fab.#{$color-name} {
+      color: $fg-color;
+      background-color: $bg-color;
+
+      &.activated,
+      &:active {
+        background-color: $bg-color-activated;
+      }
+
+      .button-effect {
+        background-color: $fg-color;
+      }
+    }
+
   }
+
 }
-
