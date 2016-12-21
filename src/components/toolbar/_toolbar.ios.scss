@@ -147,7 +147,7 @@ body.ios {
     transform: translateZ(0);
   }
 
-  .bar-buttons[left] {
+  .bar-buttons.left {
     order: map-get($toolbar-order-ios, buttons-left);
   }
 
@@ -157,7 +157,7 @@ body.ios {
     text-align: right;
   }
 
-  .bar-buttons[right] {
+  .bar-buttons.right {
     order: map-get($toolbar-order-ios, buttons-right);
 
     text-align: right;
@@ -271,7 +271,7 @@ body.ios {
   // iOS Toolbar Button Icon
   // --------------------------------------------------
 
-  .bar-button.bar-button-icon-left ion-icon {
+  .bar-button.bar-button-icon-left .ion-icon {
     padding-right: .3em;
 
     font-size: 1.4em;
@@ -280,7 +280,7 @@ body.ios {
     pointer-events: none;
   }
 
-  .bar-button.bar-button-icon-right ion-icon {
+  .bar-button.bar-button-icon-right .ion-icon {
     padding-left: .4em;
 
     font-size: 1.4em;
@@ -295,7 +295,7 @@ body.ios {
     min-width: .9em;
   }
 
-  .bar-button.icon-only ion-icon {
+  .bar-button.icon-only .ion-icon {
     padding: 0 .1em;
 
     font-size: 1.8em;
@@ -348,7 +348,7 @@ body.ios {
 
     min-width: 36px;
 
-    ion-icon {
+    .ion-icon {
       padding: 0 6px;
 
       font-size: 2.8rem;
@@ -356,7 +356,7 @@ body.ios {
   }
 
   .bar-button-menutoggle[end],
-  .bar-button-menutoggle[right] {
+  .bar-button-menutoggle.right {
     order: map-get($toolbar-order-ios, menu-toggle-end);
   }
 

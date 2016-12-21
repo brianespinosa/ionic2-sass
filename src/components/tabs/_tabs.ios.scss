@@ -98,8 +98,8 @@ $tabs-ios-tab-icon-size:            30px !default;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-left] .tab-button ion-icon {
+.tabs-ios[tabsLayout=icon-right] .tab-button .ion-icon,
+.tabs-ios[tabsLayout=icon-left] .tab-button .ion-icon {
   min-width: 24px;
   height: 26px;
 

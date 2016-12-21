@@ -156,7 +156,7 @@ body.md {
     transform: translateZ(0);
   }
 
-  .bar-buttons[left] {
+  .bar-buttons.left {
     order: map-get($toolbar-order-md, buttons-left);
   }
 
@@ -170,7 +170,7 @@ body.md {
     text-align: right;
   }
 
-  .bar-buttons[right] {
+  .bar-buttons.right {
     order: map-get($toolbar-order-md, buttons-right);
 
     text-align: right;
@@ -296,7 +296,7 @@ body.md {
   // Material Design Toolbar Button Icon
   // --------------------------------------------------
 
-  .bar-button.bar-button-icon-left ion-icon {
+  .bar-button.bar-button-icon-left .ion-icon {
     padding-right: .3em;
 
     font-size: 1.4em;
@@ -305,7 +305,7 @@ body.md {
     pointer-events: none;
   }
 
-  .bar-button.bar-button-icon-right ion-icon {
+  .bar-button.bar-button-icon-right .ion-icon {
     padding-left: .4em;
 
     font-size: 1.4em;
@@ -318,7 +318,7 @@ body.md {
     padding: 0;
   }
 
-  .bar-button.icon-only ion-icon {
+  .bar-button.icon-only .ion-icon {
     padding: 0 .1em;
 
     min-width: 28px;
@@ -367,14 +367,14 @@ body.md {
     min-width: 44px;
   }
 
-  .bar-button-menutoggle ion-icon {
+  .bar-button-menutoggle .ion-icon {
     padding: 0 6px;
 
     font-size: 2.4rem;
   }
 
   .bar-button-menutoggle[end],
-  .bar-button-menutoggle[right] {
+  .bar-button-menutoggle.right {
     order: map-get($toolbar-order-md, menu-toggle-end);
 
     margin: 0 2px;

@@ -13,7 +13,7 @@ ion-scroll.scroll-y .scroll-content {
   overflow-y: auto;
 }
 
-ion-scroll[center] .scroll-content {
+ion-scroll.center .scroll-content {
   display: flex;
 
   align-items: center;

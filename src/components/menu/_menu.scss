@@ -47,7 +47,7 @@ ion-menu.show-menu {
   position: absolute;
 }
 
-ion-menu[side=right] > .menu-inner {
+ion-menu.side-right > .menu-inner {
   right: 0;
   left: auto;
 }

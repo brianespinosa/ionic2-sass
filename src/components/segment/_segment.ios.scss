@@ -90,7 +90,7 @@ $segment-button-ios-toolbar-icon-line-height:   2.4rem !default;
   color: $segment-button-ios-background-color-activated;
   background-color: $segment-button-ios-background-color;
 
-  ion-icon {
+  .ion-icon {
     font-size: $segment-button-ios-icon-size;
     line-height: $segment-button-ios-icon-line-height;
   }
@@ -155,7 +155,7 @@ $segment-button-ios-toolbar-icon-line-height:   2.4rem !default;
   font-size: $segment-button-ios-toolbar-font-size;
   line-height: $segment-button-ios-toolbar-line-height;
 
-  ion-icon {
+  .ion-icon {
     font-size: $segment-button-ios-toolbar-icon-size;
     line-height: $segment-button-ios-toolbar-icon-line-height;
   }

@@ -113,8 +113,8 @@ $tabs-wp-tab-icon-size:                 2.4rem !default;
   padding-bottom: 10px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-left] .tab-button ion-icon {
+.tabs-wp[tabsLayout=icon-right] .tab-button .ion-icon,
+.tabs-wp[tabsLayout=icon-left] .tab-button .ion-icon {
   min-width: 24px;
 }
 
