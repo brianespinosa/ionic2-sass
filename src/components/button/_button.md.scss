@@ -195,19 +195,20 @@ body.md {
     transition: box-shadow $button-md-transition-duration $button-md-transition-timing-function,
                 background-color $button-md-transition-duration $button-md-transition-timing-function,
                 color $button-md-transition-duration $button-md-transition-timing-function;
-  }
 
-  .button:hover:not(.disable-hover) {
-    background-color: $button-md-background-color-hover;
-  }
+    &.activated,
+    &:active {
+      background-color: $button-md-background-color-activated;
+      box-shadow: $button-md-box-shadow-activated;
+    }
 
-  .button.activated {
-    background-color: $button-md-background-color-activated;
-    box-shadow: $button-md-box-shadow-activated;
-  }
+    &:hover:not(.disable-hover) {
+      background-color: $button-md-background-color-hover;
+    }
 
-  .button .button-effect {
-    background-color: $button-md-text-color;
+    .button-effect {
+      background-color: $button-md-text-color;
+    }
   }
 
 
@@ -222,20 +223,23 @@ body.md {
     .button.#{$color-name} {
       color: $fg-color;
       background-color: $bg-color;
+
+      &:hover:not(.disable-hover) {
+        background-color: $bg-color;
+      }
+
+      &.activated,
+      &:active {
+        background-color: $bg-color-activated;
+        opacity: $button-md-opacity-activated;
+      }
+
+      .button-effect {
+        background-color: $fg-color;
+      }
+
     }
 
-    .button.#{$color-name}:hover:not(.disable-hover) {
-      background-color: $bg-color;
-    }
-
-    .button.#{$color-name}.activated {
-      background-color: $bg-color-activated;
-      opacity: $button-md-opacity-activated;
-    }
-
-    .button.#{$color-name} .button-effect {
-      background-color: $fg-color;
-    }
   }
 
 
@@ -258,7 +262,7 @@ body.md {
     font-size: $button-md-small-font-size;
   }
 
-  .button-small.icon-only ion-icon {
+  .button-small.icon-only .ion-icon {
     font-size: $button-md-small-icon-font-size;
   }
 
@@ -292,20 +296,22 @@ body.md {
     color: $button-md-outline-text-color;
     background-color: $button-md-outline-background-color;
     box-shadow: $button-md-outline-box-shadow;
-  }
 
-  .button-outline:hover:not(.disable-hover) {
-    background-color: $button-md-outline-background-color-hover;
-  }
+    &:hover:not(.disable-hover) {
+      background-color: $button-md-outline-background-color-hover;
+    }
 
-  .button-outline.activated {
-    background-color: $button-md-outline-background-color-activated;
-    box-shadow: $button-md-outline-box-shadow-activated;
-    opacity: $button-md-outline-opacity-activated;
-  }
+    &.activated,
+    &:active {
+      background-color: $button-md-outline-background-color-activated;
+      box-shadow: $button-md-outline-box-shadow-activated;
+      opacity: $button-md-outline-opacity-activated;
+    }
 
-  .button-outline .button-effect {
-    background-color: $button-md-outline-ripple-background-color;
+    .button-effect {
+      background-color: $button-md-outline-ripple-background-color;
+    }
+
   }
 
 
@@ -319,19 +325,22 @@ body.md {
       border-color: $fg-color;
       color: $fg-color;
       background-color: $button-md-outline-background-color;
+
+      &:hover:not(.disable-hover) {
+        background-color: $button-md-outline-background-color-hover;
+      }
+
+      &.activated,
+      &:active {
+        background-color: $button-md-outline-background-color-activated;
+      }
+
+      .button-effect {
+        background-color: $fg-color;
+      }
+
     }
 
-    .button-outline.#{$color-name}:hover:not(.disable-hover) {
-      background-color: $button-md-outline-background-color-hover;
-    }
-
-    .button-outline.#{$color-name}.activated {
-      background-color: $button-md-outline-background-color-activated;
-    }
-
-    .button-outline.#{$color-name} .button-effect {
-      background-color: $fg-color;
-    }
   }
 
 
@@ -344,20 +353,23 @@ body.md {
     background-color: $button-md-clear-background-color;
     box-shadow: $button-md-clear-box-shadow;
     opacity: $button-md-clear-opacity;
+
+    &.activated,
+    &:active {
+      background-color: $button-md-clear-background-color-activated;
+      box-shadow: $button-md-clear-box-shadow-activated;
+    }
+
+    &:hover:not(.disable-hover) {
+      background-color: $button-md-clear-background-color-hover;
+    }
+
+    .button-effect {
+      background-color: $button-md-clear-ripple-background-color;
+    }
+
   }
 
-  .button-clear.activated {
-    background-color: $button-md-clear-background-color-activated;
-    box-shadow: $button-md-clear-box-shadow-activated;
-  }
-
-  .button-clear:hover:not(.disable-hover) {
-    background-color: $button-md-clear-background-color-hover;
-  }
-
-  .button-clear .button-effect {
-    background-color: $button-md-clear-ripple-background-color;
-  }
 
 
   // Material Design Clear Button Color Mixin
@@ -370,16 +382,19 @@ body.md {
       border-color: $button-md-clear-border-color;
       color: $fg-color;
       background-color: $button-md-clear-background-color;
+
+      &.activated,
+      &:active {
+        background-color: $button-md-clear-background-color-activated;
+        box-shadow: $button-md-clear-box-shadow-activated;
+      }
+
+      &:hover:not(.disable-hover) {
+        color: $fg-color;
+      }
+
     }
 
-    .button-clear.#{$color-name}.activated {
-      background-color: $button-md-clear-background-color-activated;
-      box-shadow: $button-md-clear-box-shadow-activated;
-    }
-
-    .button-clear.#{$color-name}:hover:not(.disable-hover) {
-      color: $fg-color;
-    }
   }
 
 
