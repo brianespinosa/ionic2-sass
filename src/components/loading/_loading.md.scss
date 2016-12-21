@@ -46,48 +46,52 @@ $loading-md-spinner-crescent-color:    $loading-md-spinner-color !default;
 $loading-md-spinner-dots-color:        $loading-md-spinner-color !default;
 
 
-.loading-md .loading-wrapper {
-  padding: $loading-md-padding;
+body.md {
 
-  max-width: $loading-md-max-width;
-  max-height: $loading-md-max-height;
+  .loading .loading-wrapper {
+    padding: $loading-md-padding;
 
-  border-radius: $loading-md-border-radius;
-  color: $loading-md-text-color;
-  background: $loading-md-background;
+    max-width: $loading-md-max-width;
+    max-height: $loading-md-max-height;
 
-  box-shadow: $loading-md-box-shadow;
-}
+    border-radius: $loading-md-border-radius;
+    color: $loading-md-text-color;
+    background: $loading-md-background;
 
-
-// Material Design Loading Content
-// -----------------------------------------
-
-.loading-md .loading-spinner + .loading-content {
-  margin-left: 16px;
-}
+    box-shadow: $loading-md-box-shadow;
+  }
 
 
-// Material Design Loading Spinner fill colors
-// -----------------------------------------
+  // Material Design Loading Content
+  // -----------------------------------------
 
-.loading-md .spinner-ios line,
-.loading-md .spinner-ios-small line {
-  stroke: $loading-md-spinner-ios-color;
-}
+  .loading .loading-spinner + .loading-content {
+    margin-left: 16px;
+  }
 
-.loading-md .spinner-bubbles circle {
-  fill: $loading-md-spinner-bubbles-color;
-}
 
-.loading-md .spinner-circles circle {
-  fill: $loading-md-spinner-circles-color;
-}
+  // Material Design Loading Spinner fill colors
+  // -----------------------------------------
 
-.loading-md .spinner-crescent circle {
-  stroke: $loading-md-spinner-crescent-color;
-}
+  .loading .spinner line,
+  .loading .spinner.small line {
+    stroke: $loading-md-spinner-ios-color;
+  }
 
-.loading-md .spinner-dots circle {
-  fill: $loading-md-spinner-dots-color;
+  .loading .spinner-bubbles circle {
+    fill: $loading-md-spinner-bubbles-color;
+  }
+
+  .loading .spinner-circles circle {
+    fill: $loading-md-spinner-circles-color;
+  }
+
+  .loading .spinner-crescent circle {
+    stroke: $loading-md-spinner-crescent-color;
+  }
+
+  .loading .spinner-dots circle {
+    fill: $loading-md-spinner-dots-color;
+  }
+
 }

@@ -40,46 +40,50 @@ $loading-wp-spinner-crescent-color:    $loading-wp-spinner-color !default;
 $loading-wp-spinner-dots-color:        $loading-wp-spinner-color !default;
 
 
-.loading-wp .loading-wrapper {
-  padding: $loading-wp-padding;
+body.wp {
 
-  max-width: $loading-wp-max-width;
-  max-height: $loading-wp-max-height;
+  .loading .loading-wrapper {
+    padding: $loading-wp-padding;
 
-  border-radius: $loading-wp-border-radius;
-  color: $loading-wp-text-color;
-  background: $loading-wp-background;
-}
+    max-width: $loading-wp-max-width;
+    max-height: $loading-wp-max-height;
 
-
-// Windows Loading Content
-// -----------------------------------------
-
-.loading-wp .loading-spinner + .loading-content {
-  margin-left: 16px;
-}
+    border-radius: $loading-wp-border-radius;
+    color: $loading-wp-text-color;
+    background: $loading-wp-background;
+  }
 
 
-// Windows Loading Spinner fill colors
-// -----------------------------------------
+  // Windows Loading Content
+  // -----------------------------------------
 
-.loading-wp .spinner-ios line,
-.loading-wp .spinner-ios-small line {
-  stroke: $loading-wp-spinner-ios-color;
-}
+  .loading .loading-spinner + .loading-content {
+    margin-left: 16px;
+  }
 
-.loading-wp .spinner-bubbles circle {
-  fill: $loading-wp-spinner-bubbles-color;
-}
 
-.loading-wp .spinner-circles circle {
-  fill: $loading-wp-spinner-circles-color;
-}
+  // Windows Loading Spinner fill colors
+  // -----------------------------------------
 
-.loading-wp .spinner-crescent circle {
-  stroke: $loading-wp-spinner-crescent-color;
-}
+  .loading .spinner line,
+  .loading .spinner.small line {
+    stroke: $loading-wp-spinner-ios-color;
+  }
 
-.loading-wp .spinner-dots circle {
-  fill: $loading-wp-spinner-dots-color;
+  .loading .spinner-bubbles circle {
+    fill: $loading-wp-spinner-bubbles-color;
+  }
+
+  .loading .spinner-circles circle {
+    fill: $loading-wp-spinner-circles-color;
+  }
+
+  .loading .spinner-crescent circle {
+    stroke: $loading-wp-spinner-crescent-color;
+  }
+
+  .loading .spinner-dots circle {
+    fill: $loading-wp-spinner-dots-color;
+  }
+
 }

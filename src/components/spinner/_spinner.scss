@@ -3,7 +3,7 @@
 // Spinners
 // --------------------------------------------------
 
-ion-spinner {
+.ion-spinner {
   position: relative;
   display: inline-block;
 
@@ -11,7 +11,7 @@ ion-spinner {
   height: 28px;
 }
 
-ion-spinner svg {
+.ion-spinner svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@ ion-spinner svg {
   transform: translateZ(0);
 }
 
-ion-spinner.spinner-paused svg {
+.ion-spinner.spinner-paused svg {
   animation-play-state: paused;
 }
 
@@ -30,14 +30,14 @@ ion-spinner.spinner-paused svg {
 // Spinner: ios / ios-small
 // --------------------------------------------------
 
-.spinner-ios line,
-.spinner-ios-small line {
+.spinner line,
+.spinner.small line {
   stroke-width: 4px;
   stroke-linecap: round;
 }
 
-.spinner-ios svg,
-.spinner-ios-small svg {
+.spinner svg,
+.spinner.small svg {
   animation: spinner-fade-out 1s linear infinite;
 }
 

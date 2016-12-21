@@ -19,47 +19,50 @@ $spinner-wp-crescent-color:       #000 !default;
 $spinner-wp-dots-color:           #444 !default;
 
 
-.spinner-wp-ios line,
-.spinner-wp-ios-small line {
-  stroke: $spinner-wp-ios-color;
-}
+body.wp {
 
-.spinner-wp-bubbles circle {
-  fill: $spinner-wp-bubbles-color;
-}
+  .spinner line,
+  .spinner.small line {
+    stroke: $spinner-wp-ios-color;
+  }
 
-.spinner-wp-circles circle {
-  fill: $spinner-wp-circles-color;
-}
+  .spinner-bubbles circle {
+    fill: $spinner-wp-bubbles-color;
+  }
 
-.spinner-wp-crescent circle {
-  stroke: $spinner-wp-crescent-color;
-}
+  .spinner-circles circle {
+    fill: $spinner-wp-circles-color;
+  }
 
-.spinner-wp-dots circle {
-  fill: $spinner-wp-dots-color;
-}
+  .spinner-crescent circle {
+    stroke: $spinner-wp-crescent-color;
+  }
+
+  .spinner-dots circle {
+    fill: $spinner-wp-dots-color;
+  }
 
 
-// Generate Windows Spinner Colors
-// --------------------------------------------------
+  // Generate Windows Spinner Colors
+  // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
 
-  .spinner-wp-#{$color-name} {
+    .spinner-#{$color-name} {
 
-    &.spinner-ios line,
-    &.spinner-ios-small line,
-    &.spinner-crescent circle {
-      stroke: $color-base;
-    }
+      &.spinner line,
+      &.spinner.small line,
+      &.spinner-crescent circle {
+        stroke: $color-base;
+      }
 
-    &.spinner-bubbles circle,
-    &.spinner-circles circle,
-    &.spinner-dots circle {
-      fill: $color-base;
+      &.spinner-bubbles circle,
+      &.spinner-circles circle,
+      &.spinner-dots circle {
+        fill: $color-base;
+      }
+
     }
 
   }
-
 }
