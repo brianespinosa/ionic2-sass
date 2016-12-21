@@ -10,7 +10,7 @@ $alert-button-line-height:        20px !default;
 $alert-button-font-size:          14px !default;
 
 
-ion-alert {
+.ion-alert {
   position: absolute;
   top: 0;
   right: 0;
@@ -18,21 +18,42 @@ ion-alert {
   left: 0;
   z-index: $z-index-overlay;
 
+  height: 0;
+
   display: flex;
 
   align-items: center;
   justify-content: center;
 
   contain: strict;
+
+  .ion-backdrop {
+    opacity: 0;
+
+    transition: opacity .2s ease-in-out;
+  }
+
+  &.active {
+    height: 100%;
+
+    .ion-backdrop {
+      opacity: .5;
+    }
+
+    .alert-wrapper {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
-ion-alert.alert-top {
+.ion-alert.alert-top {
   align-items: flex-start;
 
   padding-top: 50px;
 }
 
-ion-alert input {
+.ion-alert input {
   width: 100%;
 }
 
@@ -46,6 +67,8 @@ ion-alert input {
   max-height: $alert-max-height;
 
   opacity: 0;
+  transform: scale(.5);
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 
   contain: content;
 }

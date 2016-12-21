@@ -1,15 +1,310 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-  <title>Demo</title>
+  <title>Alerts</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
-</head>
-<body>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+</head>
+<body class="ios">
+  <div class="ion-page show-page">
+
+    <div class="ion-header">
+      <div class="ion-navbar toolbar statusbar-padding">
+        <div class="toolbar-background"></div>
+        <a class="back-button bar-button default show-back-button" href="/">
+          <span class="button-inner">
+            <span class="button-inner">
+              <i class="ion-icon back-button-icon ion-ios-arrow-back show-wp" role="img" aria-label="arrow back"></i>
+              <i class="ion-icon back-button-icon ion-md-arrow-back" role="img" aria-label="arrow back"></i>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="toolbar-content">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              Alerts
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ion-content padding header-padding">
+      <button class="button button-block light" onclick="$('#alert_example_1').addClass('active');">
+        <span class="button-inner">Show Basic Alert</span>
+        <div class="button-effect"></div>
+      </button>
+
+      <button class="button button-block secondary" onclick="$('#alert_example_2').addClass('active');">
+        <span class="button-inner">Show Prompt Alert</span>
+        <div class="button-effect"></div>
+      </button>
+
+      <button class="button button-block dark" onclick="$('#alert_example_3').addClass('active');">
+        <span class="button-inner">Show Confirmation Alert</span>
+        <div class="button-effect"></div>
+      </button>
+
+      <button class="button button-block" onclick="$('#alert_example_4').addClass('active');">
+        <span class="button-inner">Show Radio Alert</span>
+        <div class="button-effect"></div>
+      </button>
+
+      <button class="button button-block danger" onclick="$('#alert_example_5').addClass('active');">
+        <span class="button-inner">Show Checkbox Alert</span>
+        <div class="button-effect"></div>
+      </button>
+    </div> <!-- content -->
+
+    <div role="dialog" class="ion-alert alert" aria-labelledby="alert-hdr-1" aria-describedby="alert-msg-1" id="alert_example_1">
+      <div class="ion-backdrop" role="presentation"></div>
+      <div class="alert-wrapper">
+        <div class="alert-head">
+          <h2 class="alert-title" id="alert-hdr-1">New Friend!</h2>
+        </div>
+        <div class="alert-message" id="alert-msg-1">Your friend, Obi wan Kenobi, just approved your friend request!</div>
+        <div class="alert-button-group">
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Ok</span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div role="dialog" class="ion-alert alert" aria-labelledby="alert-hdr-2" aria-describedby="alert-msg-2" id="alert_example_2">
+      <div class="ion-backdrop" role="presentation"></div>
+      <div class="alert-wrapper">
+        <div class="alert-head">
+          <h2 class="alert-title" id="alert-hdr-2">Login</h2>
+        </div>
+        <div class="alert-message" id="alert-msg-2">Enter a name for this new album you're so keen on adding</div>
+        <div>
+          <div class="alert-input-group">
+            <div class="alert-input-wrapper">
+              <input class="alert-input" placeholder="Title" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="alert-button-group">
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Cancel</span>
+            <div class="button-effect"></div>
+          </button>
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Save</span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div role="dialog" class="ion-alert alert" aria-labelledby="alert-hdr-3" aria-describedby="alert-msg-3" id="alert_example_3">
+      <div class="ion-backdrop" role="presentation"></div>
+      <div class="alert-wrapper">
+        <div class="alert-head">
+          <h2 class="alert-title" id="alert-hdr-3">Use this lightsaber?</h2>
+        </div>
+        <div class="alert-message" id="alert-msg-3">Do you agree to use this lightsaber to do good across the intergalactic galaxy?</div>
+        <div class="alert-button-group">
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Disagree</span>
+            <div class="button-effect"></div>
+          </button>
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Agree</span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div role="dialog" class="ion-alert alert" aria-labelledby="alert-hdr-4" aria-describedby="alert-msg-4" id="alert_example_4">
+      <div class="ion-backdrop" role="presentation"></div>
+      <div class="alert-wrapper">
+        <div class="alert-head">
+          <h2 class="alert-title" id="alert-hdr-4">Lightsaber Color</h2>
+        </div>
+        <div class="alert-message" id="alert-msg-4"></div>
+        <div>
+          <div class="alert-radio-group" role="radiogroup" aria-labelledby="alert-hdr-4">
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="true" onclick="$('.alert-radio').attr('aria-checked', false);$(this).attr('aria-checked',true);">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">Blue</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="false" onclick="$('.alert-radio').attr('aria-checked','false');$(this).attr('aria-checked','true');">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">Green</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="false" onclick="$('.alert-radio').attr('aria-checked','false');$(this).attr('aria-checked','true');">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">Red</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="false" onclick="$('.alert-radio').attr('aria-checked','false');$(this).attr('aria-checked','true');">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">Yellow</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="false" onclick="$('.alert-radio').attr('aria-checked','false');$(this).attr('aria-checked','true');">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">Purple</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="false" onclick="$('.alert-radio').attr('aria-checked','false');$(this).attr('aria-checked','true');">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">White</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-radio alert-radio-button default" role="radio" aria-checked="false" onclick="$('.alert-radio').attr('aria-checked','false');$(this).attr('aria-checked','true');">
+              <span class="button-inner">
+                <div class="alert-radio-icon">
+                  <div class="alert-radio-inner"></div>
+                </div>
+                <div class="alert-radio-label">Black</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+          </div>
+        </div>
+        <div class="alert-button-group">
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Disagree</span>
+            <div class="button-effect"></div>
+          </button>
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Agree</span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div role="dialog" class="ion-alert alert" aria-labelledby="alert-hdr-5" aria-describedby="alert-msg-5" id="alert_example_5">
+      <div class="ion-backdrop" role="presentation"></div>
+      <div class="alert-wrapper">
+        <div class="alert-head">
+          <h2 class="alert-title" id="alert-hdr-5">Which planets have you visited?</h2>
+        </div>
+        <div class="alert-message" id="alert-msg-5"></div>
+        <div>
+          <div class="alert-checkbox-group">
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="true" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Alderaan</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="false" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Bespin</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="true" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Coruscant</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="false" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Endor</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="false" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Hoth</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="false" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Jakku</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+            <button class="alert-tappable alert-checkbox alert-checkbox-button default" role="checkbox" aria-checked="false" onclick="$(this).attr('aria-checked', $(this).attr('aria-checked')==='true'?'false':'true' );">
+              <span class="button-inner">
+                <div class="alert-checkbox-icon">
+                  <div class="alert-checkbox-inner"></div>
+                </div>
+                <div class="alert-checkbox-label">Naboo</div>
+              </span>
+              <div class="button-effect"></div>
+            </button>
+          </div>
+        </div>
+        <div class="alert-button-group">
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Disagree</span>
+            <div class="button-effect"></div>
+          </button>
+          <button ="alert-button" class="ion-button disable-hover alert-button default" onclick="$('.ion-alert').removeClass('active');">
+            <span class="button-inner">Agree</span>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 </body>
 </html>
