@@ -54,57 +54,61 @@ $action-sheet-md-icon-vertical-align:                   middle !default;
 /// @prop - Margin of the icon in the action sheet button
 $action-sheet-md-icon-margin:                           0 32px 0 0 !default;
 
-.action-sheet-md .action-sheet-container {
-  padding: .8rem 0;
+body.md {
 
-  background: $action-sheet-md-background;
-}
+  .action-sheet .action-sheet-container {
+    padding: .8rem 0;
+ 
+    background: $action-sheet-md-background;
+  }
 
-.action-sheet-md .action-sheet-title {
-  padding: $action-sheet-md-title-padding;
+  .action-sheet .action-sheet-title {
+    padding: $action-sheet-md-title-padding;
 
-  font-size: $action-sheet-md-title-font-size;
-  text-align: $action-sheet-md-text-align;
-  color: $action-sheet-md-title-color;
-}
+    font-size: $action-sheet-md-title-font-size;
+    text-align: $action-sheet-md-text-align;
+    color: $action-sheet-md-title-color;
+  }
 
-.action-sheet-md .action-sheet-button {
-  position: relative;
-  overflow: hidden;
+  .action-sheet .action-sheet-button {
+    position: relative;
+    overflow: hidden;
 
-  padding: $action-sheet-md-button-padding;
+    padding: $action-sheet-md-button-padding;
 
-  min-height: $action-sheet-md-button-min-height;
+    min-height: $action-sheet-md-button-min-height;
 
-  font-size: $action-sheet-md-button-font-size;
-  text-align: $action-sheet-md-text-align;
-  color: $action-sheet-md-button-text-color;
-  background: $action-sheet-md-button-background;
-}
+    font-size: $action-sheet-md-button-font-size;
+    text-align: $action-sheet-md-text-align;
+    color: $action-sheet-md-button-text-color;
+    background: $action-sheet-md-button-background;
+  }
 
-.action-sheet-md .action-sheet-button.activated {
-  background: $action-sheet-md-button-background-activated;
-}
+  .action-sheet .action-sheet-button.activated {
+    background: $action-sheet-md-button-background-activated;
+  }
 
-.action-sheet-md .action-sheet-icon {
-  margin: $action-sheet-md-icon-margin;
-  padding: 0;
+  .action-sheet .action-sheet-icon {
+    margin: $action-sheet-md-icon-margin;
+    padding: 0;
 
-  width: $action-sheet-md-icon-width;
+    width: $action-sheet-md-icon-width;
 
-  font-size: $action-sheet-md-icon-font-size;
-  text-align: $action-sheet-md-icon-text-align;
-  vertical-align: $action-sheet-md-icon-vertical-align;
-}
+    font-size: $action-sheet-md-icon-font-size;
+    text-align: $action-sheet-md-icon-text-align;
+    vertical-align: $action-sheet-md-icon-vertical-align;
+  }
 
-.action-sheet-md .action-sheet-group {
-  overflow: hidden;
-}
+  .action-sheet .action-sheet-group {
+    overflow: hidden;
+  }
 
-.action-sheet-md .action-sheet-group .button-inner {
-  justify-content: flex-start;
-}
+  .action-sheet .action-sheet-group .button-inner {
+    justify-content: flex-start;
+  }
 
-.action-sheet-md .action-sheet-selected {
-  font-weight: bold;
+  .action-sheet .action-sheet-selected {
+    font-weight: bold;
+  }
+
 }
