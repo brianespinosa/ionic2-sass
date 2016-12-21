@@ -5,7 +5,7 @@
 
 $backdrop-color: #000 !default;
 
-ion-backdrop {
+.ion-backdrop {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,6 +20,6 @@ ion-backdrop {
   transform: translateZ(0);
 }
 
-ion-backdrop.backdrop-no-tappable {
+.ion-backdrop.backdrop-no-tappable {
   cursor: auto;
 }
