@@ -46,7 +46,7 @@ $chip-ios-icon-text-color:            color-contrast($colors-ios, $chip-ios-icon
   margin: $chip-ios-label-margin;
 }
 
-.chip-ios > ion-icon {
+.chip-ios > .ion-icon {
   color: $chip-ios-icon-text-color;
   background-color: $chip-ios-icon-background-color;
 }

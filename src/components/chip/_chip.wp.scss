@@ -46,7 +46,7 @@ $chip-wp-icon-text-color:            color-contrast($colors-wp, $chip-wp-icon-ba
   margin: $chip-wp-label-margin;
 }
 
-.chip-wp > ion-icon {
+.chip-wp > .ion-icon {
   color: $chip-wp-icon-text-color;
   background-color: $chip-wp-icon-background-color;
 }

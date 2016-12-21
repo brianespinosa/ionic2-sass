@@ -46,7 +46,7 @@ $chip-md-icon-text-color:            color-contrast($colors-md, $chip-md-icon-ba
   margin: $chip-md-label-margin;
 }
 
-.chip-md > ion-icon {
+.chip-md > .ion-icon {
   color: $chip-md-icon-text-color;
   background-color: $chip-md-icon-background-color;
 }
