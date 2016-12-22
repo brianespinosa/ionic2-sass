@@ -4,18 +4,32 @@
 // --------------------------------------------------
 
 
-ion-popover {
+.ion-popover {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $z-index-overlay;
+  z-index: 0;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
+
+  &.active {
+//    z-index: 10047;
+    z-index: $z-index-overlay;
+
+    .ion-backdrop {
+      opacity: .08;
+    }
+
+    .popover-content {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+    }
+  }
 }
 
 .popover-wrapper {
@@ -33,6 +47,9 @@ ion-popover {
   overflow: auto;
 
   flex-direction: column;
+
+  transform-origin: right top 0px;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 }
 
 .popover-content ion-content,

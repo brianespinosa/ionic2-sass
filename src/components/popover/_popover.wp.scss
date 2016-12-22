@@ -28,21 +28,33 @@ $popover-wp-text-color:                $text-wp-color !default;
 $popover-wp-background:                $background-wp-color !default;
 
 
-.popover-wp .popover-content {
-  width: $popover-wp-width;
-  min-width: $popover-wp-min-width;
-  min-height: $popover-wp-min-height;
-  max-height: $popover-wp-max-height;
+body.wp {
 
-  border: $popover-wp-border;
-  border-radius: $popover-wp-border-radius;
-  color: $popover-wp-text-color;
-  background: $popover-wp-background;
+  .popover .popover-content {
+    width: $popover-wp-width;
+    min-width: $popover-wp-min-width;
+    min-height: $popover-wp-min-height;
+    max-height: $popover-wp-max-height;
 
-  transform-origin: top left;
-}
+    border: $popover-wp-border;
+    border-radius: $popover-wp-border-radius;
+    color: $popover-wp-text-color;
+    background: $popover-wp-background;
 
-.popover-wp .popover-viewport {
-  opacity: 0;
-  transition-delay: 100ms;
+//    transform-origin: top left;
+
+    transform: scale(0);
+    opacity: 0;
+
+    top: 8px;
+    right: 8px;
+
+  }
+
+  //  DONT NEED THIS FOR NOW WITH TRANSITIONS
+  //  .popover .popover-viewport {
+  //    opacity: 0;
+  //    transition-delay: 100ms;
+  //  }
+
 }
