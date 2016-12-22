@@ -1,15 +1,201 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-  <title>Demo</title>
+  <title>Modals</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
+
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="ios">
+  <div class="ion-page show-page">
+
+    <div class="ion-header">
+      <div class="ion-navbar toolbar">
+        <div class="toolbar-background"></div>
+        <a class="back-button bar-button default show-back-button" href="/">
+          <span class="button-inner">
+            <span class="button-inner">
+              <i class="ion-icon back-button-icon ion-ios-arrow-back show-wp" role="img" aria-label="arrow back"></i>
+              <i class="ion-icon back-button-icon ion-md-arrow-back" role="img" aria-label="arrow back"></i>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="toolbar-content">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              Modals
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ion-content header-padding">
+      <div class="scroll-content">
+        <div class="ion-list list">
+
+          <div class="ion-list-header item list-header">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <div class="ion-label label">Hobbits</div>
+              </div>
+            </div>
+            <div class="button-effect"></div>
+          </div>
+
+          <button class="ion-item item item-block" onclick="$('#modal_example_1').addClass('active');">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <div class="ion-label label">
+                  Gollum
+                </div>
+              </div>
+            </div>
+            <div class="button-effect"></div>
+          </button>
+          <button class="ion-item item item-block" onclick="$('#modal_example_2').addClass('active');">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <div class="ion-label label">
+                  Frodo Baggins
+                </div>
+              </div>
+            </div>
+            <div class="button-effect"></div>
+          </button>
+          <button class="ion-item item item-block" onclick="$('#modal_example_3').addClass('active');">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <div class="ion-label label">
+                  Sam
+                </div>
+              </div>
+            </div>
+            <div class="button-effect"></div>
+          </button>
+        </div>
+      </div>
+
+    </div> <!-- content -->
+  </div>
+
+  <div class="ion-modal" id="modal_example_1">
+    <div class="ion-backdrop" disable-activated="" role="presentation" tappable=""></div>
+    <div class="modal-wrapper">
+      <div class="ion-page show-page">
+        <div class="ion-header header">
+          <div class="ion-toolbar toolbar">
+            <div class="toolbar-background"></div>
+            <div class="ion-buttons bar-buttons start">
+              <button class="bar-button default tappable" onclick="$(this).closest('.ion-modal').removeClass('active');">
+                <span class="button-inner">
+                  <span color="primary" class="text text-ios primary">Cancel</span>
+                  <i name="close" role="img" class="ion-icon icon ion-md-close show-wp" aria-label="close"></i>
+                </span>
+                <div class="button-effect"></div>
+              </button>
+            </div>
+            <div class="toolbar-content">
+              <div class="ion-title title">
+                <div class="toolbar-title">
+                  Description
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ion-content padding header-padding">
+          <div class="scroll-content">
+            <h2>Gollum</h2>
+            <p>Prescious?!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ion-modal" id="modal_example_2">
+    <div class="ion-backdrop" disable-activated="" role="presentation" tappable=""></div>
+    <div class="modal-wrapper">
+      <div class="ion-page show-page">
+        <div class="ion-header header">
+          <div class="ion-toolbar toolbar">
+            <div class="toolbar-background"></div>
+            <div class="ion-buttons bar-buttons start">
+              <button class="bar-button default tappable" onclick="$(this).closest('.ion-modal').removeClass('active');">
+                <span class="button-inner">
+                  <span color="primary" class="text text-ios primary">Cancel</span>
+                  <i name="close" role="img" class="ion-icon icon ion-md-close show-wp" aria-label="close"></i>
+                </span>
+                <div class="button-effect"></div>
+              </button>
+            </div>
+            <div class="toolbar-content">
+              <div class="ion-title title">
+                <div class="toolbar-title">
+                  Description
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ion-content padding header-padding">
+          <div class="fixed-content"></div>
+          <div class="scroll-content">
+            <h2>Frodo Baggins</h2>
+            <p>Pocket? What pocket?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ion-modal" id="modal_example_3">
+    <div class="ion-backdrop" disable-activated="" role="presentation" tappable=""></div>
+    <div class="modal-wrapper">
+      <div class="ion-page show-page">
+        <div class="ion-header header">
+          <div class="ion-toolbar toolbar">
+            <div class="toolbar-background"></div>
+            <div class="ion-buttons bar-buttons start">
+              <button class="bar-button default tappable" onclick="$(this).closest('.ion-modal').removeClass('active');">
+                <span class="button-inner">
+                  <span color="primary" class="text text-ios primary">Cancel</span>
+                  <i name="close" role="img" class="ion-icon icon ion-md-close show-wp" aria-label="close"></i>
+                </span>
+                <div class="button-effect"></div>
+              </button>
+            </div>
+            <div class="toolbar-content">
+              <div class="ion-title title">
+                <div class="toolbar-title">
+                  Description
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ion-content padding header-padding">
+          <div class="scroll-content">
+            <h2>Samwise Gamgee</h2>
+            <p>What we need is a few good taters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 </body>
 </html>
