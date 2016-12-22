@@ -124,7 +124,7 @@ body.wp {
     margin-left: 0;
   }
 
-  .bar-buttons[end] {
+  .bar-buttons.end {
     order: map-get($toolbar-order-wp, buttons-end);
 
     text-align: right;
@@ -327,7 +327,7 @@ body.wp {
     }
   }
 
-  .bar-button-menutoggle[end],
+  .bar-button-menutoggle.end,
   .bar-button-menutoggle.right {
     order: map-get($toolbar-order-wp, menu-toggle-end);
 
