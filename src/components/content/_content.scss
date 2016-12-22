@@ -7,6 +7,7 @@
   position: relative;
   top: 0;
   left: 0;
+  bottom: 0;
   display: block;
 
   width: 100%;
@@ -15,9 +16,9 @@
 //  contain: layout size style;
 }
 
-//.ion-page > .ion-content {
-//  position: absolute;
-//}
+.ion-page > .ion-content {
+  position: absolute;
+}
 
 a {
   color: $link-color;
@@ -63,7 +64,8 @@ a {
 // Fixed Content (ion-fixed and ion-fab)
 // --------------------------------------------------
 
-.fixed-content {
+.fixed-content,
+.scroll-content {
   position: absolute;
   top: 0;
   right: 0;
@@ -84,25 +86,24 @@ a {
 // Content Padding
 // --------------------------------------------------
 
-$header-height-ios: 64px;
-$header-height-md: 76px;
-$header-height-wp: 66px;
-
 body {
   &.ios {
-    .header-padding {
+    .fixed-content,
+    .scroll-content {
       margin-top: $header-height-ios; // ios right now
     }
   }
 
   &.md {
-    .header-padding {
+    .fixed-content,
+    .scroll-content {
       margin-top: $header-height-md; // ios right now
     }
   }
 
   &.wp {
-    .header-padding {
+    .fixed-content,
+    .scroll-content {
       margin-top: $header-height-wp; // ios right now
     }
   }

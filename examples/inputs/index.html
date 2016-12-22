@@ -18,7 +18,7 @@
   <div class="ion-page show-page">
 
     <div class="ion-header">
-      <div class="ion-navbar toolbar statusbar-padding">
+      <div class="ion-navbar toolbar">
         <div class="toolbar-background"></div>
         <a class="back-button bar-button default show-back-button" href="/">
           <span class="button-inner">
@@ -41,139 +41,152 @@
     </div>
 
     <div class="ion-content header-padding">
-      <h4 class="padding">Basic Usage</h4>
-      <div class="ion-list list">
+      <div class="scroll-content">
+        <h4 class="padding">Basic Usage</h4>
+        <div class="ion-list list">
 
-        <div class="ion-item item item-block item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <div class="ion-input input">
-                <input class="text-input" placeholder="First Name" autocomplete="off" autocorrect="off" type="text">
+          <div class="ion-item item item-block item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <div class="ion-input input">
+                  <input class="text-input" placeholder="First Name" autocomplete="off" autocorrect="off" type="text">
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="ion-item item item-block item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <div class="ion-input input">
-                <input class="text-input" placeholder="Last Name" autocomplete="off" autocorrect="off" type="text">
+          <div class="ion-item item item-block item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <div class="ion-input input">
+                  <input class="text-input" placeholder="Last Name" autocomplete="off" autocorrect="off" type="text">
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="padding">
+            <button class="button button-block" onclick="window.top.scrollTo(0, 225);">
+              <span class="button-inner">Sign Up</span>
+              <div class="button-effect"></div>
+            </button>
+          </div>
+
         </div>
+        <h4 class="padding">Fixed Labels</h4>
+        <div class="ion-list list">
 
-        <div class="padding">
-          <button class="button button-block">
-            <span class="button-inner">Sign Up</span>
-            <div class="button-effect"></div>
-          </button>
-        </div>
-
-      </div>
-      <h4 class="padding">Fixed Labels</h4>
-      <div class="ion-list list">
-
-        <div class="ion-item item item-block item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <label class="ion-label label fixed" for="fixed-username">Username</label>
-              <div class="ion-input input">
-                <input class="text-input" autocomplete="off" autocorrect="off" type="text" id="fixed-username">
+          <div class="ion-item item item-block item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <label class="ion-label label fixed" for="fixed-username">Username</label>
+                <div class="ion-input input">
+                  <input class="text-input" autocomplete="off" autocorrect="off" type="text" id="fixed-username">
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="ion-item item item-block item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <label class="ion-label label fixed" for="fixed-password">Password</label>
-              <div class="ion-input input">
-                <input class="text-input" autocomplete="off" autocorrect="off" type="password" id="fixed-password">
+          <div class="ion-item item item-block item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <label class="ion-label label fixed" for="fixed-password">Password</label>
+                <div class="ion-input input">
+                  <input class="text-input" autocomplete="off" autocorrect="off" type="password" id="fixed-password">
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="padding">
+            <button class="button button-block">
+              <span class="button-inner">Sign In</span>
+              <div class="button-effect"></div>
+            </button>
+          </div>
+
         </div>
+        <h4 class="padding">Floating Labels</h4>
+        <div class="ion-list list">
 
-        <div class="padding">
-          <button class="button button-block">
-            <span class="button-inner">Sign In</span>
-            <div class="button-effect"></div>
-          </button>
-        </div>
-
-      </div>
-      <h4 class="padding">Floating Labels</h4>
-      <div class="ion-list list">
-
-        <div class="ion-item item item-block item-label-floating item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <label class="ion-label label floating" for="floating-username">Username</label>
-              <div class="ion-input input">
-                <input class="text-input" autocomplete="off" autocorrect="off" type="text" id="floating-username" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+          <div class="ion-item item item-block item-label-floating item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <label class="ion-label label floating" for="floating-username">Username</label>
+                <div class="ion-input input">
+                  <input class="text-input" autocomplete="off" autocorrect="off" type="text" id="floating-username" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="ion-item item item-block item-label-floating item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <label class="ion-label label floating" for="floating-password">Password</label>
-              <div class="ion-input input">
-                <input class="text-input" autocomplete="off" autocorrect="off" type="password" id="floating-password" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+          <div class="ion-item item item-block item-label-floating item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <label class="ion-label label floating" for="floating-password">Password</label>
+                <div class="ion-input input">
+                  <input class="text-input" autocomplete="off" autocorrect="off" type="password" id="floating-password" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="padding">
+            <button class="button button-block">
+              <span class="button-inner">Sign In</span>
+              <div class="button-effect"></div>
+            </button>
+          </div>
+
         </div>
 
-        <div class="padding">
-          <button class="button button-block">
-            <span class="button-inner">Sign In</span>
-            <div class="button-effect"></div>
-          </button>
-        </div>
+        <h4 class="padding">Stacked Labels</h4>
 
-      </div>
+        <div class="ion-list list">
 
-      <h4 class="padding">Stacked Labels</h4>
-
-      <div class="ion-list list">
-
-        <div class="ion-item item item-block item-label-stacked item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <label class="ion-label label stacked" for="stacked-username">Username</label>
-              <div class="ion-input input">
-                <input class="text-input" autocomplete="off" autocorrect="off" type="text" id="stacked-username" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+          <div class="ion-item item item-block item-label-stacked item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <label class="ion-label label stacked" for="stacked-username">Username</label>
+                <div class="ion-input input">
+                  <input class="text-input" autocomplete="off" autocorrect="off" type="text" id="stacked-username" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="ion-item item item-block item-label-stacked item-input">
-          <div class="item-inner">
-            <div class="input-wrapper">
-              <label class="ion-label label stacked" for="stacked-password">Password</label>
-              <div class="ion-input input">
-                <input class="text-input" autocomplete="off" autocorrect="off" type="password" id="stacked-password" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+          <div class="ion-item item item-block item-label-stacked item-input">
+            <div class="item-inner">
+              <div class="input-wrapper">
+                <label class="ion-label label stacked" for="stacked-password">Password</label>
+                <div class="ion-input input">
+                  <input class="text-input" autocomplete="off" autocorrect="off" type="password" id="stacked-password" onfocus="$(this).closest('.ion-item').addClass('input-has-focus');" onblur="if ( $(this).val().length < 1 ) {$(this).closest('.ion-item').removeClass('input-has-focus');}">
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="padding">
-          <button class="button button-block">
-            <span class="button-inner">Sign In</span>
-            <div class="button-effect"></div>
-          </button>
+          <div class="padding">
+            <button class="button button-block">
+              <span class="button-inner">Sign In</span>
+              <div class="button-effect"></div>
+            </button>
+          </div>
+
         </div>
 
       </div>
     </div> <!-- content -->
   </div>
+
+  <script type="text/javascript">
+    window.addEventListener("load",function() {
+        setTimeout(function(){
+            // This hides the address bar:
+            window.scrollTo(0, 225);
+        }, 0);
+    });
+  </script>
+
 </body>
 </html>

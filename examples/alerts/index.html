@@ -18,7 +18,7 @@
   <div class="ion-page show-page">
 
     <div class="ion-header">
-      <div class="ion-navbar toolbar statusbar-padding">
+      <div class="ion-navbar toolbar">
         <div class="toolbar-background"></div>
         <a class="back-button bar-button default show-back-button" href="/">
           <span class="button-inner">
@@ -41,30 +41,32 @@
     </div>
 
     <div class="ion-content padding header-padding">
-      <button class="button button-block light" onclick="$('#alert_example_1').addClass('active');">
-        <span class="button-inner">Show Basic Alert</span>
-        <div class="button-effect"></div>
-      </button>
+      <div class="scroll-content">
+        <button class="button button-block light" onclick="$('#alert_example_1').addClass('active');">
+          <span class="button-inner">Show Basic Alert</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <button class="button button-block secondary" onclick="$('#alert_example_2').addClass('active');">
-        <span class="button-inner">Show Prompt Alert</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-block secondary" onclick="$('#alert_example_2').addClass('active');">
+          <span class="button-inner">Show Prompt Alert</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <button class="button button-block dark" onclick="$('#alert_example_3').addClass('active');">
-        <span class="button-inner">Show Confirmation Alert</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-block dark" onclick="$('#alert_example_3').addClass('active');">
+          <span class="button-inner">Show Confirmation Alert</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <button class="button button-block" onclick="$('#alert_example_4').addClass('active');">
-        <span class="button-inner">Show Radio Alert</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-block" onclick="$('#alert_example_4').addClass('active');">
+          <span class="button-inner">Show Radio Alert</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <button class="button button-block danger" onclick="$('#alert_example_5').addClass('active');">
-        <span class="button-inner">Show Checkbox Alert</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-block danger" onclick="$('#alert_example_5').addClass('active');">
+          <span class="button-inner">Show Checkbox Alert</span>
+          <div class="button-effect"></div>
+        </button>
+      </div>
     </div> <!-- content -->
 
     <div role="dialog" class="ion-alert alert" aria-labelledby="alert-hdr-1" aria-describedby="alert-msg-1" id="alert_example_1">

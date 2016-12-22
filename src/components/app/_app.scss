@@ -32,17 +32,16 @@ html {
 }
 
 body {
-//  position: fixed;
-//  overflow: hidden;
-//
-//  margin: 0;
-//  padding: 0;
-//
-//  width: 100%;
-//  max-width: 100%;
-//  height: 100%;
-//  max-height: 100%;
-//
+  position: fixed;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
 
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -64,7 +63,7 @@ body {
 // Nav Container Structure
 // --------------------------------------------------
 
-ion-app,
+.ion-app,
 .ion-tab,
 .ion-tabs,
 .app-root {
@@ -91,7 +90,7 @@ ion-app,
   display: block;
 }
 
-//ion-app,
+//.ion-app,
 //.ion-tab,
 //.ion-tabs,
 //.app-root,

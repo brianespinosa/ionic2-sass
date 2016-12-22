@@ -18,7 +18,7 @@
   <div class="ion-page show-page">
 
     <div class="ion-header">
-      <div class="ion-navbar toolbar statusbar-padding">
+      <div class="ion-navbar toolbar">
         <div class="toolbar-background"></div>
         <a class="back-button bar-button default show-back-button" href="/">
           <span class="button-inner">
@@ -41,11 +41,12 @@
     </div>
 
     <div class="ion-content padding header-padding">
-      <button class="button button-block" onclick="$('#sheet_example_1').addClass('active');">
-        <span class="button-inner">Show Action Sheet</span>
-        <div class="button-effect"></div>
-      </button>
-
+      <div class="scroll-content">
+        <button class="button button-block" onclick="$('#sheet_example_1').addClass('active');">
+          <span class="button-inner">Show Action Sheet</span>
+          <div class="button-effect"></div>
+        </button>
+      </div>
     </div> <!-- content -->
 
     <div id="sheet_example_1" role="dialog" class="ion-action-sheet action-sheet" aria-labelledby="acst-hdr-1">

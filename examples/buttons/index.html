@@ -8,12 +8,17 @@
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
+
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
 </head>
 <body class="ios">
   <div class="ion-page show-page">
 
     <div class="ion-header">
-      <div class="ion-navbar toolbar statusbar-padding">
+      <div class="ion-navbar toolbar">
         <div class="toolbar-background"></div>
         <a class="back-button bar-button default show-back-button" href="/">
           <span class="button-inner">
@@ -38,128 +43,131 @@
 
 
     <div class="ion-content padding header-padding">
+      <div class="scroll-content">
 
-      <h4 class="padding-bottom">Basic Usage</h4>
+        <h4 class="padding-bottom">Basic Usage</h4>
 
-      <button class="button light">
-        <span class="button-inner">Light</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button default">
-        <span class="button-inner">Default</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button secondary">
-        <span class="button-inner">Secondary</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button danger">
-        <span class="button-inner">Danger</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button dark">
-        <span class="button-inner">Dark</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button light">
+          <span class="button-inner">Light</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button default">
+          <span class="button-inner">Default</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button secondary">
+          <span class="button-inner">Secondary</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button danger">
+          <span class="button-inner">Danger</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button dark">
+          <span class="button-inner">Dark</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <h4 class="padding-bottom">Outline Style</h4>
+        <h4 class="padding-bottom">Outline Style</h4>
 
-      <button class="button button-outline light">
-        <span class="button-inner">Light</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-outline default">
-        <span class="button-inner">Default</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-outline secondary">
-        <span class="button-inner">Secondary</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-outline danger">
-        <span class="button-inner">Danger</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-outline dark">
-        <span class="button-inner">Dark</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-outline light">
+          <span class="button-inner">Light</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-outline default">
+          <span class="button-inner">Default</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-outline secondary">
+          <span class="button-inner">Secondary</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-outline danger">
+          <span class="button-inner">Danger</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-outline dark">
+          <span class="button-inner">Dark</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <h4 class="padding-bottom">Clear Style</h4>
+        <h4 class="padding-bottom">Clear Style</h4>
 
-      <button class="button button-clear light">
-        <span class="button-inner">Light</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-clear default">
-        <span class="button-inner">Default</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-clear secondary">
-        <span class="button-inner">Secondary</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-clear danger">
-        <span class="button-inner">Danger</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-clear dark">
-        <span class="button-inner">Dark</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-clear light">
+          <span class="button-inner">Light</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-clear default">
+          <span class="button-inner">Default</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-clear secondary">
+          <span class="button-inner">Secondary</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-clear danger">
+          <span class="button-inner">Danger</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-clear dark">
+          <span class="button-inner">Dark</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <h4 class="padding-bottom">Round Buttons</h4>
+        <h4 class="padding-bottom">Round Buttons</h4>
 
-      <button class="button button-round light">
-        <span class="button-inner">Light</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-round default">
-        <span class="button-inner">Default</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-round secondary">
-        <span class="button-inner">Secondary</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-round danger">
-        <span class="button-inner">Danger</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-round dark">
-        <span class="button-inner">Dark</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-round light">
+          <span class="button-inner">Light</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-round default">
+          <span class="button-inner">Default</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-round secondary">
+          <span class="button-inner">Secondary</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-round danger">
+          <span class="button-inner">Danger</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-round dark">
+          <span class="button-inner">Dark</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <h4 class="padding-bottom">Block Button</h4>
+        <h4 class="padding-bottom">Block Button</h4>
 
-      <button class="button button-block">
-        <span class="button-inner">Block Button</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-block">
+          <span class="button-inner">Block Button</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <h4 class="padding-bottom">Full Button</h4>
+        <h4 class="padding-bottom">Full Button</h4>
 
-      <button class="button button-full">
-        <span class="button-inner">Full Button</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-full">
+          <span class="button-inner">Full Button</span>
+          <div class="button-effect"></div>
+        </button>
 
-      <h4 class="padding-bottom">Button Sizes</h4>
+        <h4 class="padding-bottom">Button Sizes</h4>
 
-      <button class="button button-small">
-        <span class="button-inner">Small Button</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-medium">
-        <span class="button-inner">Medium Button</span>
-        <div class="button-effect"></div>
-      </button>
-      <button class="button button-large">
-        <span class="button-inner">Large Button</span>
-        <div class="button-effect"></div>
-      </button>
+        <button class="button button-small">
+          <span class="button-inner">Small Button</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-medium">
+          <span class="button-inner">Medium Button</span>
+          <div class="button-effect"></div>
+        </button>
+        <button class="button button-large">
+          <span class="button-inner">Large Button</span>
+          <div class="button-effect"></div>
+        </button>
+      </div>
     </div> <!-- content -->
   </div>
+
 </body>
 </html>

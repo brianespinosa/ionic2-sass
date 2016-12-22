@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-  <title>Demo</title>
+  <title>Navigation</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,7 +9,37 @@
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
 </head>
-<body>
+<body class="ios">
+  <div class="ion-page show-page">
 
+    <div class="ion-header">
+      <div class="ion-navbar toolbar">
+        <div class="toolbar-background"></div>
+        <a class="back-button bar-button default show-back-button" href="/">
+          <span class="button-inner">
+            <span class="button-inner">
+              <i class="ion-icon back-button-icon ion-ios-arrow-back show-wp" role="img" aria-label="arrow back"></i>
+              <i class="ion-icon back-button-icon ion-md-arrow-back" role="img" aria-label="arrow back"></i>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="toolbar-content">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              Navigation
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ion-content padding header-padding">
+      <div class="scroll-content">
+        <p>The main index page of these documents is an example of navigation.</p>
+      </div>
+    </div> <!-- content -->
+  </div>
 </body>
 </html>
