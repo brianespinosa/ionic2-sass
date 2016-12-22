@@ -4,6 +4,11 @@
 
 body.md {
 
+  .text-ios,
+  .text-wp {
+    display: none;
+  }
+
   @each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
 
     .text.#{$color-name} {
