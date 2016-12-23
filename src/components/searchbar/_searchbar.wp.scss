@@ -67,134 +67,138 @@ $searchbar-wp-input-clear-icon-svg:      "<svg xmlns='http://www.w3.org/2000/svg
 $searchbar-wp-input-clear-icon-size:     22px !default;
 
 
-// Searchbar
-// -----------------------------------------
+body.wp {
 
-.searchbar-wp {
-  padding: $searchbar-wp-padding;
+  // Searchbar
+  // -----------------------------------------
 
-  background: $searchbar-wp-background-color;
-}
+  .searchbar {
+    padding: $searchbar-wp-padding;
 
-.searchbar-wp .searchbar-input-container {
-  border: $searchbar-wp-border-width solid $searchbar-wp-border-color;
-}
+    background: $searchbar-wp-background-color;
+  }
 
-// Searchbar Search Icon
-// -----------------------------------------
+  .searchbar .searchbar-input-container {
+    border: $searchbar-wp-border-width solid $searchbar-wp-border-color;
+  }
 
-.searchbar-wp .searchbar-search-icon {
-  @include svg-background-image($searchbar-wp-input-search-icon-svg);
+  // Searchbar Search Icon
+  // -----------------------------------------
 
-  position: absolute;
-  top: 5px;
-  right: $searchbar-wp-input-padding-horizontal;
+  .searchbar .searchbar-search-icon {
+    @include svg-background-image($searchbar-wp-input-search-icon-svg);
 
-  width: $searchbar-wp-input-search-icon-size + 1;
-  height: $searchbar-wp-input-search-icon-size + 1;
+    position: absolute;
+    top: 5px;
+    right: $searchbar-wp-input-padding-horizontal;
 
-  background-repeat: no-repeat;
-  background-size: $searchbar-wp-input-search-icon-size;
-}
+    width: $searchbar-wp-input-search-icon-size + 1;
+    height: $searchbar-wp-input-search-icon-size + 1;
 
-.searchbar-wp .searchbar-search-icon.activated {
-  background-color: transparent;
-}
+    background-repeat: no-repeat;
+    background-size: $searchbar-wp-input-search-icon-size;
+  }
 
-
-// Searchbar Input Field
-// -----------------------------------------
-
-.searchbar-wp .searchbar-input {
-  @include placeholder($searchbar-wp-input-placeholder-color);
-
-  padding: $searchbar-wp-input-padding-vertical $searchbar-wp-input-padding-horizontal;
-
-  height: $searchbar-wp-input-height;
-
-  border-radius: $searchbar-wp-input-border-radius;
-  font-size: $searchbar-wp-input-font-size;
-  font-weight: $searchbar-wp-input-font-weight;
-
-  line-height: $searchbar-wp-input-line-height;
-  color: $searchbar-wp-input-text-color;
-
-  background-color: $searchbar-wp-input-background-color;
-  background-position: $searchbar-wp-input-padding-horizontal center;
-}
+  .searchbar .searchbar-search-icon.activated {
+    background-color: transparent;
+  }
 
 
-// Searchbar Clear Input Icon
-// -----------------------------------------
+  // Searchbar Input Field
+  // -----------------------------------------
 
-.searchbar-wp .searchbar-clear-icon {
-  @include svg-background-image($searchbar-wp-input-clear-icon-svg);
+  .searchbar .searchbar-input {
+    @include placeholder($searchbar-wp-input-placeholder-color);
 
-  position: absolute;
-  top: 0;
-  right: $searchbar-wp-input-padding-horizontal;
+    padding: $searchbar-wp-input-padding-vertical $searchbar-wp-input-padding-horizontal;
 
-  padding: 0;
+    height: $searchbar-wp-input-height;
 
-  width: $searchbar-wp-input-clear-icon-size;
-  height: 100%;
+    border-radius: $searchbar-wp-input-border-radius;
+    font-size: $searchbar-wp-input-font-size;
+    font-weight: $searchbar-wp-input-font-weight;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: $searchbar-wp-input-clear-icon-size;
-}
+    line-height: $searchbar-wp-input-line-height;
+    color: $searchbar-wp-input-text-color;
 
-.searchbar-wp .searchbar-clear-icon.activated {
-  background-color: transparent;
-}
+    background-color: $searchbar-wp-input-background-color;
+    background-position: $searchbar-wp-input-padding-horizontal center;
+  }
 
 
-// Searchbar Focused
-// -----------------------------------------
+  // Searchbar Clear Input Icon
+  // -----------------------------------------
 
-.searchbar-wp.searchbar-has-focus .searchbar-input-container {
-  border-color: $searchbar-wp-border-color-focused;
-}
+  .searchbar .searchbar-clear-icon {
+    @include svg-background-image($searchbar-wp-input-clear-icon-svg);
 
+    position: absolute;
+    top: 0;
+    right: $searchbar-wp-input-padding-horizontal;
 
-// Searchbar Left Aligned
-// -----------------------------------------
+    padding: 0;
 
-.searchbar-wp.searchbar-has-value .searchbar-search-icon {
-  display: none;
-}
+    width: $searchbar-wp-input-clear-icon-size;
+    height: 100%;
 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $searchbar-wp-input-clear-icon-size;
+  }
 
-// Searchbar Cancel Icon (iOS only)
-// -----------------------------------------
-
-.searchbar-wp .searchbar-ios-cancel {
-  display: none;
-}
-
-
-// Searchbar Cancel Icon (MD only)
-// -----------------------------------------
-
-.searchbar-wp .searchbar-md-cancel {
-  display: none;
-}
-
-// Searchbar in Toolbar
-// -----------------------------------------
-
-.toolbar .searchbar-wp {
-  padding: 2px;
-}
+  .searchbar .searchbar-clear-icon.activated {
+    background-color: transparent;
+  }
 
 
-// Generate Default Windows Search Bar Colors
-// --------------------------------------------------
+  // Searchbar Focused
+  // -----------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+  .searchbar.searchbar-has-focus .searchbar-input-container {
+    border-color: $searchbar-wp-border-color-focused;
+  }
 
-  .searchbar-wp-#{$color-name}.searchbar-has-focus .searchbar-input-container {
-    border-color: $color-base;
+
+  // Searchbar Left Aligned
+  // -----------------------------------------
+
+  .searchbar.searchbar-has-value .searchbar-search-icon {
+    display: none;
+  }
+
+
+  // Searchbar Cancel Icon (iOS only)
+  // -----------------------------------------
+
+  .searchbar .searchbar-ios-cancel {
+    display: none;
+  }
+
+
+  // Searchbar Cancel Icon (MD only)
+  // -----------------------------------------
+
+  .searchbar .searchbar-md-cancel {
+    display: none;
+  }
+
+  // Searchbar in Toolbar
+  // -----------------------------------------
+
+  .toolbar .searchbar {
+    padding: 2px;
+  }
+
+
+  // Generate Default Windows Search Bar Colors
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-wp) {
+
+    .searchbar-wp-#{$color-name}.searchbar-has-focus .searchbar-input-container {
+      border-color: $color-base;
+    }
+
   }
 
 }
