@@ -1,15 +1,168 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-  <title>Demo</title>
+  <title>Tabs</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <link href="/css/ionic.css" rel="stylesheet">
   <link href="/css/scrollbar-fix.css" rel="stylesheet">
-</head>
-<body>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+</head>
+<body class="ios">
+  <div class="ion-page show-page">
+
+    <div class="ion-header">
+      <div class="ion-navbar toolbar">
+        <div class="toolbar-background"></div>
+        <a class="back-button bar-button default show-back-button" href="/">
+          <span class="button-inner">
+            <span class="button-inner">
+              <i class="ion-icon back-button-icon ion-ios-arrow-back show-wp" role="img" aria-label="arrow back"></i>
+              <i class="ion-icon back-button-icon ion-md-arrow-back" role="img" aria-label="arrow back"></i>
+              <span class="back-button-text">Back</span>
+            </span>
+          </span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="toolbar-content">
+          <div class="ion-title">
+            <div class="toolbar-title">
+              Tabs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ion-tabs tabs-basic tabs tabs-placement-bottom tabs-layout-icon-top hide" id="tabs_example_1">
+      <div class="tabbar show-tabbar" role="tablist">
+        <a class="tab-button has-title has-title-only disable-hover" href="#" role="tab" aria-selected="true">
+          <span class="tab-button-text">Music</span>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-title has-title-only disable-hover" href="#" role="tab" aria-selected="false">
+          <span class="tab-button-text">Movies</span>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-title has-title-only disable-hover" href="#" role="tab" aria-selected="false">
+          <span class="tab-button-text">Games</span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="tab-highlight"></div>
+      </div>
+      <div tab-portal=""></div>
+    </div>
+
+    <div class="ion-tabs tabs-icon tabs primary tabs-placement-bottom tabs-layout-icon-top hide" id="tabs_example_2">
+      <div class="tabbar show-tabbar" role="tablist">
+        <a class="tab-button has-icon icon-only disable-hover" href="#" role="tab" aria-selected="true">
+          <i class="ion-icon tab-button-icon icon ion-ios-contact show-all" role="img" aria-label="contact"></i>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-icon icon-only disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-compass-outline show-all" role="img" aria-label="contact"></i>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-icon icon-only disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-analytics-outline show-all" role="img" aria-label="contact"></i>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-icon icon-only disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-settings-outline show-all" role="img" aria-label="contact"></i>
+          <div class="button-effect"></div>
+        </a>
+        <div class="tab-highlight"></div>
+      </div>
+      <div tab-portal=""></div>
+    </div>
+
+    <div class="ion-tabs tabs-icon-text tabs primary tabs-placement-bottom tabs-layout-icon-top hide" id="tabs_example_3">
+      <div class="tabbar show-tabbar" role="tablist">
+        <a class="tab-button has-title has-icon disable-hover" href="#" role="tab" aria-selected="true">
+          <i class="ion-icon tab-button-icon icon ion-ios-contact show-all" role="img" aria-label="contact"></i>
+          <span class="tab-button-text">Contact</span>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-title has-icon disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-compass-outline show-all" role="img" aria-label="compass"></i>
+          <span class="tab-button-text">Compass</span>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-title has-icon disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-analytics-outline show-all" role="img" aria-label="analytics"></i>
+          <span class="tab-button-text">Analytics</span>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-title has-icon disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-settings-outline show-all" role="img" aria-label="settings"></i>
+          <span class="tab-button-text">Settings</span>
+          <div class="button-effect"></div>
+        </a>
+        <div class="tab-highlight"></div>
+      </div>
+      <div tab-portal=""></div>
+    </div>
+
+    <div class="ion-tabs tabs-icon tabs tabs-placement-bottom tabs-layout-icon-top" id="tabs_example_4">
+      <div class="tabbar show-tabbar" role="tablist">
+        <a class="tab-button has-icon icon-only has-badge disable-hover" href="#" role="tab" aria-selected="true">
+          <i class="ion-icon tab-button-icon icon ion-ios-contact show-all" role="img" aria-label="contact"></i>
+          <div class="ion-badge tab-badge badge danger">3</div>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-icon icon-only has-badge disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-compass-outline show-all" role="img" aria-label="contact"></i>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-icon icon-only has-badge disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-analytics-outline show-all" role="img" aria-label="contact"></i>
+          <div class="ion-badge tab-badge badge danger">24</div>
+          <div class="button-effect"></div>
+        </a>
+        <a class="tab-button has-icon icon-only has-badge disable-hover" href="#" role="tab" aria-selected="false">
+          <i class="ion-icon tab-button-icon icon ion-ios-settings-outline show-all" role="img" aria-label="contact"></i>
+          <div class="button-effect"></div>
+        </a>
+        <div class="tab-highlight"></div>
+      </div>
+      <div tab-portal=""></div>
+    </div>
+
+
+    <div class="ion-content tabs-padding header-padding">
+      <div class="fixed-content"></div>
+      <div class="scroll-content padding">
+
+        <button class="button button-block" onclick="$('.ion-tabs').addClass('hide');$('#tabs_example_1').removeClass('hide');">
+          <span class="button-inner">Basic Usage</span>
+          <div class="button-effect"></div>
+        </button>
+
+        <button class="button button-block" onclick="$('.ion-tabs').addClass('hide');$('#tabs_example_2').removeClass('hide');">
+          <span class="button-inner">Icon Tabs</span>
+          <div class="button-effect"></div>
+        </button>
+
+        <button class="button button-block" onclick="$('.ion-tabs').addClass('hide');$('#tabs_example_3').removeClass('hide');">
+          <span class="button-inner">Icon and Text Tabs</span>
+          <div class="button-effect"></div>
+        </button>
+
+        <button class="button button-block" onclick="$('.ion-tabs').addClass('hide');$('#tabs_example_4').removeClass('hide');">
+          <span class="button-inner">Badges</span>
+          <div class="button-effect"></div>
+        </button>
+
+
+      </div>
+    </div> <!-- content -->
+  </div>
 </body>
 </html>
+<ion-tabs class="tabs-icon tabs tabs-ios tabs-ios-primary" tabsplacement="bottom" tabslayout="icon-top" tabshighlight="false">

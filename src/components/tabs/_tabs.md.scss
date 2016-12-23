@@ -73,164 +73,168 @@ $tabs-md-tab-icon-transition:                 transform .3s ease-in-out !default
 $tabs-md-tab-icon-size:                       2.4rem !default;
 
 
-.tabs-md .tabbar {
-  background: $tabs-md-background;
-}
+body.md {
 
-
-// Material Design Tab Button
-// --------------------------------------------------
-
-.tabs-md .tab-button {
-  padding: $tabs-md-tab-padding;
-
-  min-height: $tabs-md-tab-min-height;
-
-  font-weight: $tabs-md-tab-font-weight;
-  color: $tabs-md-tab-text-color;
-}
-
-.tabs-md .tab-button[aria-selected=true] {
-  padding: $tabs-md-tab-padding-active;
-
-  color: $tabs-md-tab-text-color-active;
-}
-
-
-// Material Design Tab Button Text
-// --------------------------------------------------
-
-.tabs-md .tab-button-text {
-  margin: $tabs-md-tab-text-margin;
-
-  font-size: $tabs-md-tab-font-size;
-
-  text-transform: $tabs-md-tab-text-capitalization;
-  transform-origin: $tabs-md-tab-text-transform-origin;
-  transition: $tabs-md-tab-text-transition;
-}
-
-.tabs-md .tab-button[aria-selected=true] .tab-button-text {
-  transform: $tabs-md-tab-text-transform-active;
-  transition: $tabs-md-tab-text-transition;
-}
-
-.tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text {
-  margin-top: 4px;
-  margin-bottom: 0;
-}
-
-.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text {
-  margin-top: 0;
-}
-
-
-// Material Design Tab Button Icon
-// --------------------------------------------------
-
-.tabs-md .tab-button-icon {
-  margin-top: 1px;
-
-  min-width: $tabs-md-tab-icon-size;
-
-  font-size: $tabs-md-tab-icon-size;
-
-  color: $tabs-md-tab-icon-color;
-
-  transform-origin: $tabs-md-tab-icon-transform-origin;
-  transition: $tabs-md-tab-icon-transition;
-}
-
-// Tab layout: icon-top, icon-only, title-only
-.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
-  color: $tabs-md-tab-icon-color-active;
-
-  transform: $tabs-md-tab-icon-transform-active;
-}
-
-// Tab layout: icon-right
-.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon {
-  transform: $tabs-md-tab-icon-right-transform-active;
-}
-
-// Tab layout: icon-bottom
-.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon {
-  transform: $tabs-md-tab-icon-bottom-transform-active;
-}
-
-// Tab layout: icon-left
-.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon {
-  transform: $tabs-md-tab-icon-left-transform-active;
-}
-
-
-// Material Design Tab with Icon or Title only
-// --------------------------------------------------
-
-.tabs-md[tabsLayout=icon-hide] .tab-button,
-.tabs-md[tabsLayout=title-hide] .tab-button,
-.tabs-md .tab-button.icon-only,
-.tabs-md .tab-button.has-title-only {
-  padding: 0 10px;
-}
-
-
-// Material Design Tab Highlight
-// --------------------------------------------------
-
-.tabs-md[tabsHighlight=true] .tab-highlight {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-
-  width: 1px;
-  height: 2px;
-
-  background: $tabs-md-tab-color-active;
-  transform: translateZ(0);
-  transform-origin: 0 0;
-}
-
-.tabs-md[tabsHighlight=true] .tab-highlight.animate {
-  transition-duration: 300ms;
-}
-
-.tabs-md[tabsHighlight=true][tabsPlacement=bottom] .tab-highlight {
-  top: 0;
-}
-
-
-// Material Design Tabs Color Mixin
-// --------------------------------------------------
-
-@mixin tabbar-md($color-name, $color-base, $color-contrast) {
-
-  .tabs-md-#{$color-name} .tabbar {
-    background-color: $color-base;
+  .tabs .tabbar {
+    background: $tabs-md-background;
   }
 
-  .tabs-md-#{$color-name} .tab-button,
-  .tabs-md-#{$color-name} .tab-button-icon {
-    color: rgba($color-contrast, $tabs-md-tab-opacity);
+
+  // Material Design Tab Button
+  // --------------------------------------------------
+
+  .tabs .tab-button {
+    padding: $tabs-md-tab-padding;
+
+    min-height: $tabs-md-tab-min-height;
+
+    font-weight: $tabs-md-tab-font-weight;
+    color: $tabs-md-tab-text-color;
   }
 
-  .tabs-md-#{$color-name} .tab-button:hover:not(.disable-hover),
-  .tabs-md-#{$color-name} .tab-button[aria-selected=true],
-  .tabs-md-#{$color-name} .tab-button[aria-selected=true] .tab-button-icon {
-    color: $color-contrast;
+  .tabs .tab-button[aria-selected=true] {
+    padding: $tabs-md-tab-padding-active;
+
+    color: $tabs-md-tab-text-color-active;
   }
 
-  .tabs-md-#{$color-name}[tabsHighlight=true] .tab-highlight {
-    background: $color-contrast;
+
+  // Material Design Tab Button Text
+  // --------------------------------------------------
+
+  .tabs .tab-button-text {
+    margin: $tabs-md-tab-text-margin;
+
+    font-size: $tabs-md-tab-font-size;
+
+    text-transform: $tabs-md-tab-text-capitalization;
+    transform-origin: $tabs-md-tab-text-transform-origin;
+    transition: $tabs-md-tab-text-transition;
   }
 
-}
+  .tabs .tab-button[aria-selected=true] .tab-button-text {
+    transform: $tabs-md-tab-text-transform-active;
+    transition: $tabs-md-tab-text-transition;
+  }
+
+  .tabs.tabs-layout-icon-top .has-icon .tab-button-text {
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  .tabs.tabs-layout-icon-bottom .tab-button .tab-button-text {
+    margin-top: 0;
+  }
 
 
-// Material Design Tabbar Color Generation
-// --------------------------------------------------
+  // Material Design Tab Button Icon
+  // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
-  @include tabbar-md($color-name, $color-base, $color-contrast);
+  .tabs .tab-button-icon {
+    margin-top: 1px;
+
+    min-width: $tabs-md-tab-icon-size;
+
+    font-size: $tabs-md-tab-icon-size;
+
+    color: $tabs-md-tab-icon-color;
+
+    transform-origin: $tabs-md-tab-icon-transform-origin;
+    transition: $tabs-md-tab-icon-transition;
+  }
+
+  // Tab layout: icon-top, icon-only, title-only
+  .tabs .tab-button[aria-selected=true] .tab-button-icon {
+    color: $tabs-md-tab-icon-color-active;
+
+    transform: $tabs-md-tab-icon-transform-active;
+  }
+
+  // Tab layout: icon-right
+  .tabs.tabs-layout-icon-right .tab-button[aria-selected=true] .tab-button-icon {
+    transform: $tabs-md-tab-icon-right-transform-active;
+  }
+
+  // Tab layout: icon-bottom
+  .tabs.tabs-layout-icon-bottom .tab-button[aria-selected=true] .tab-button-icon {
+    transform: $tabs-md-tab-icon-bottom-transform-active;
+  }
+
+  // Tab layout: icon-left
+  .tabs.tabs-layout-icon-left .tab-button[aria-selected=true] .tab-button-icon {
+    transform: $tabs-md-tab-icon-left-transform-active;
+  }
+
+
+  // Material Design Tab with Icon or Title only
+  // --------------------------------------------------
+
+  .tabs.tabs-layout-icon-hide .tab-button,
+  .tabs.tabs-layout-title-hide .tab-button,
+  .tabs .tab-button.icon-only,
+  .tabs .tab-button.has-title-only {
+    padding: 0 10px;
+  }
+
+
+  // Material Design Tab Highlight
+  // --------------------------------------------------
+
+  .tabs.tabs-highlight .tab-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+
+    width: 1px;
+    height: 2px;
+
+    background: $tabs-md-tab-color-active;
+    transform: translateZ(0);
+    transform-origin: 0 0;
+  }
+
+  .tabs.tabs-highlight .tab-highlight.animate {
+    transition-duration: 300ms;
+  }
+
+  .tabs.tabs-highlight.tabs-placement-bottom .tab-highlight {
+    top: 0;
+  }
+
+
+  // Material Design Tabs Color Mixin
+  // --------------------------------------------------
+
+  @mixin tabbar-md($color-name, $color-base, $color-contrast) {
+
+    .tabs.#{$color-name} .tabbar {
+      background-color: $color-base;
+    }
+
+    .tabs.#{$color-name} .tab-button,
+    .tabs.#{$color-name} .tab-button-icon {
+      color: rgba($color-contrast, $tabs-md-tab-opacity);
+    }
+
+    .tabs.#{$color-name} .tab-button:hover:not(.disable-hover),
+    .tabs.#{$color-name} .tab-button[aria-selected=true],
+    .tabs.#{$color-name} .tab-button[aria-selected=true] .tab-button-icon {
+      color: $color-contrast;
+    }
+
+    .tabs.#{$color-name}.tabs-highlight .tab-highlight {
+      background: $color-contrast;
+    }
+
+  }
+
+
+  // Material Design Tabbar Color Generation
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+    @include tabbar-md($color-name, $color-base, $color-contrast);
+  }
+
 }
