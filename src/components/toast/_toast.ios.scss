@@ -19,43 +19,47 @@ $toast-ios-title-font-size:                       1.4rem !default;
 $toast-ios-title-padding:                         1.5rem !default;
 
 
-.toast-ios .toast-wrapper {
-  position: absolute;
-  right: 10px;
+body.ios {
 
-  left: 10px;
-  z-index: $z-index-overlay-wrapper;
-  display: block;
+  .toast .toast-wrapper {
+    position: absolute;
+    right: 10px;
 
-  margin: auto;
+    left: 10px;
+    z-index: $z-index-overlay-wrapper;
+    display: block;
 
-  max-width: $toast-max-width;
+    margin: auto;
 
-  border-radius: $toast-ios-border-radius;
+    max-width: $toast-max-width;
 
-  background: $toast-ios-background;
-}
+    border-radius: $toast-ios-border-radius;
 
-.toast-ios .toast-wrapper.toast-top {
-  top: 0;
+    background: $toast-ios-background;
+  }
 
-  transform: translate3d(0, -100%, 0);
-}
+  .toast .toast-wrapper.toast-top {
+    top: 0;
 
-.toast-ios .toast-wrapper.toast-bottom {
-  bottom: 0;
+    transform: translate3d(0, -100%, 0);
+  }
 
-  transform: translate3d(0, 100%, 0);
-}
+  .toast .toast-wrapper.toast-bottom {
+    bottom: 0;
 
-.toast-ios .toast-wrapper.toast-middle {
-  opacity: .01;
-}
+    transform: translate3d(0, 100%, 0);
+  }
 
-.toast-ios .toast-message {
-  padding: $toast-ios-title-padding;
+  .toast .toast-wrapper.toast-middle {
+    opacity: .01;
+  }
 
-  font-size: $toast-ios-title-font-size;
+  .toast .toast-message {
+    padding: $toast-ios-title-padding;
 
-  color: $toast-ios-title-color;
+    font-size: $toast-ios-title-font-size;
+
+    color: $toast-ios-title-color;
+  }
+
 }

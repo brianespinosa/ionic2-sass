@@ -21,46 +21,49 @@ $toast-wp-title-font-size:                       1.4rem !default;
 /// @prop - Padding of the toast title
 $toast-wp-title-padding:                         1.5rem !default;
 
+body.wp {
 
-.toast-wp .toast-wrapper {
-  position: absolute;
-  right: 0;
-  left: 0;
-  z-index: $z-index-overlay-wrapper;
-  display: block;
+  .toast .toast-wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: $z-index-overlay-wrapper;
+    display: block;
 
-  margin: auto;
+    margin: auto;
 
-  max-width: $toast-max-width;
+    max-width: $toast-max-width;
 
-  border-radius: $toast-wp-border-radius;
-  background: $toast-wp-background;
-}
+    border-radius: $toast-wp-border-radius;
+    background: $toast-wp-background;
+  }
 
-.toast-wp .toast-wrapper.toast-top {
-  top: 0;
+  .toast .toast-wrapper.toast-top {
+    top: 0;
 
-  opacity: .01;
-}
+    opacity: .01;
+  }
 
-.toast-wp .toast-wrapper.toast-bottom {
-  bottom: 0;
+  .toast .toast-wrapper.toast-bottom {
+    bottom: 0;
 
-  opacity: .01;
-}
+    opacity: .01;
+  }
 
-.toast-wp .toast-wrapper.toast-middle {
-  opacity: .01;
-}
+  .toast .toast-wrapper.toast-middle {
+    opacity: .01;
+  }
 
-.toast-message {
-  padding: $toast-wp-title-padding;
+  .toast-message {
+    padding: $toast-wp-title-padding;
 
-  font-size: $toast-wp-title-font-size;
+    font-size: $toast-wp-title-font-size;
 
-  color: $toast-wp-title-color;
-}
+    color: $toast-wp-title-color;
+  }
 
-.toast-button {
-  color: $toast-wp-button-color;
+  .toast-button {
+    color: $toast-wp-button-color;
+  }
+
 }

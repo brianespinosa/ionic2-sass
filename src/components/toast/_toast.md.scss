@@ -16,41 +16,45 @@ $toast-md-title-font-size:                       1.5rem !default;
 $toast-md-title-padding:                         19px 16px 17px !default;
 
 
-.toast-md .toast-wrapper {
-  position: absolute;
-  right: 0;
-  left: 0;
-  z-index: $z-index-overlay-wrapper;
-  display: block;
+body.md {
 
-  margin: auto;
+  .toast .toast-wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: $z-index-overlay-wrapper;
+    display: block;
 
-  width: $toast-width;
-  max-width: $toast-max-width;
+    margin: auto;
 
-  background: $toast-md-background;
-}
+    width: $toast-width;
+    max-width: $toast-max-width;
 
-.toast-md .toast-wrapper.toast-top {
-  top: 0;
+    background: $toast-md-background;
+  }
 
-  transform: translate3d(0, -100%, 0);
-}
+  .toast .toast-wrapper.toast-top {
+    top: 0;
 
-.toast-md .toast-wrapper.toast-bottom {
-  bottom: 0;
+    transform: translate3d(0, -100%, 0);
+  }
 
-  transform: translate3d(0, 100%, 0);
-}
+  .toast .toast-wrapper.toast-bottom {
+    bottom: 0;
 
-.toast-md .toast-wrapper.toast-middle {
-  opacity: .01;
-}
+    transform: translate3d(0, 100%, 0);
+  }
 
-.toast-md .toast-message {
-  padding: $toast-md-title-padding;
+  .toast .toast-wrapper.toast-middle {
+    opacity: .01;
+  }
 
-  font-size: $toast-md-title-font-size;
+  .toast .toast-message {
+    padding: $toast-md-title-padding;
 
-  color: $toast-md-title-color;
+    font-size: $toast-md-title-font-size;
+
+    color: $toast-md-title-color;
+  }
+
 }
