@@ -43,82 +43,86 @@ $segment-button-md-icon-size:                  2.6rem !default;
 $segment-button-md-icon-line-height:           $segment-button-md-line-height !default;
 
 
-.segment-md .segment-button {
-  flex: 1;
+body.md {
 
-  padding: $segment-button-md-padding;
+  .segment .segment-button {
+    flex: 1;
 
-  width: 0;
-  height: $segment-button-md-height;
+    padding: $segment-button-md-padding;
 
-  border-bottom-width: $segment-button-md-border-bottom-width;
-  border-bottom-style: solid;
-  border-bottom-color: $segment-button-md-border-bottom-color;
+    width: 0;
+    height: $segment-button-md-height;
 
-  font-size: $segment-button-md-font-size;
-  font-weight: 500;
-  line-height: $segment-button-md-line-height;
-  text-transform: uppercase;
+    border-bottom-width: $segment-button-md-border-bottom-width;
+    border-bottom-style: solid;
+    border-bottom-color: $segment-button-md-border-bottom-color;
 
-  color: $segment-button-md-text-color-activated;
-  background-color: transparent;
-  opacity: $segment-button-md-opacity;
-  transition: 100ms all linear;
+    font-size: $segment-button-md-font-size;
+    font-weight: 500;
+    line-height: $segment-button-md-line-height;
+    text-transform: uppercase;
 
-  .ion-icon {
-    font-size: $segment-button-md-icon-size;
-    line-height: $segment-button-md-icon-line-height;
-  }
+    color: $segment-button-md-text-color-activated;
+    background-color: transparent;
+    opacity: $segment-button-md-opacity;
+    transition: 100ms all linear;
 
-  &.activated,
-  &.segment-activated {
-    border-color: $segment-button-md-border-color-activated;
-    opacity: $segment-button-md-opacity-activated;
-  }
-}
-
-.segment-md .segment-button-disabled {
-  opacity: $segment-button-md-opacity-disabled;
-
-  pointer-events: none;
-}
-
-.toolbar {
-
-  .segment-md {
-    margin: 0 auto;
-  }
-
-  .segment-md .segment-button.activated,
-  .segment-md .segment-button.segment-activated {
-    opacity: 1;
-  }
-
-}
-
-
-// Material Design Segment Button Mixin
-// --------------------------------------------------
-
-@mixin md-segment-button($color-name, $color-base, $color-contrast) {
-
-  .segment-md-#{$color-name} .segment-button {
-    color: $color-base;
+    .ion-icon {
+      font-size: $segment-button-md-icon-size;
+      line-height: $segment-button-md-icon-line-height;
+    }
 
     &.activated,
     &.segment-activated {
-      border-color: $color-base;
-      color: $color-base;
-      opacity: 1;
+      border-color: $segment-button-md-border-color-activated;
+      opacity: $segment-button-md-opacity-activated;
     }
   }
 
-}
+  .segment .segment-button-disabled {
+    opacity: $segment-button-md-opacity-disabled;
+
+    pointer-events: none;
+  }
+
+  .toolbar {
+
+    .segment {
+      margin: 0 auto;
+    }
+
+    .segment .segment-button.activated,
+    .segment .segment-button.segment-activated {
+      opacity: 1;
+    }
+
+  }
 
 
-// Material Design Segment Color Generation
-// --------------------------------------------------
+  // Material Design Segment Button Mixin
+  // --------------------------------------------------
 
-@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
-  @include md-segment-button($color-name, $color-base, $color-contrast);
+  @mixin md-segment-button($color-name, $color-base, $color-contrast) {
+
+    .segment.#{$color-name} .segment-button {
+      color: $color-base;
+
+      &.activated,
+      &.segment-activated {
+        border-color: $color-base;
+        color: $color-base;
+        opacity: 1;
+      }
+    }
+
+  }
+
+
+  // Material Design Segment Color Generation
+  // --------------------------------------------------
+
+  @each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+    @include md-segment-button($color-name, $color-base, $color-contrast);
+  }
+
 }
