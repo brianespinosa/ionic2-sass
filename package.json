@@ -2,9 +2,6 @@
   "name": "ionic2-sass",
   "version": "2.1.14",
   "description": "This project is a SASS only version of Ionic 2 for use as you see fit.",
-  "dependencies": {
-    "ionicons": "^3.0.0"
-  },
   "devDependencies": {
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
