@@ -6,24 +6,23 @@
 
 $ionicons-font-path: $font-path !default;
 
-@import "ionicons-variables";
-@import "ionicons-font";
 @import "ionicons-icons";
+@import "ionicons-variables";
 
 
 @font-face {
-  font-family: "Ionicons2";
-  src: url("#{$ionicons-font-path}/ionicons.woff2") format("woff2"),
-    url("#{$ionicons-font-path}/ionicons.woff") format("woff"),
-    url("#{$ionicons-font-path}/ionicons.ttf") format("truetype");
+  font-family: "Ionicons";
+  src: url("#{$ionicons-font-path}/ionicons.woff2?v=#{$ionicons-version}") format("woff2"),
+    url("#{$ionicons-font-path}/ionicons.woff?v=#{$ionicons-version}") format("woff"),
+    url("#{$ionicons-font-path}/ionicons.ttf?v=#{$ionicons-version}") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.ion-icon {
+ion-icon {
   display: inline-block;
 
-  font-family: "Ionicons2";
+  font-family: "Ionicons";
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
