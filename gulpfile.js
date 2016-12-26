@@ -10,7 +10,7 @@ gulp.task('sass', function () {
   return gulp.src('src/**/*.scss')
     .pipe(sass({
 //      outputStyle: 'compressed'
-      includePaths: ['ionicons/dist/scss']
+//      includePaths: ['ionicons/dist/scss']
     }).on('error', sass.logError))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
